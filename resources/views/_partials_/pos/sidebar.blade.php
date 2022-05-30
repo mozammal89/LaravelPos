@@ -66,11 +66,11 @@
                         data-i18n="Ecommerce">Product</span></a>
                 <ul class="menu-content">
                     <li>
-                        <router-link to="/store-category"><i class="feather icon-plus"></i><span class="menu-item"
+                        <router-link to="/store-product"><i class="feather icon-plus"></i><span class="menu-item"
                                 data-i18n="Shop">Add Product</span></router-link>
                     </li>
                     <li>
-                        <router-link to="/category-list"><i class="feather icon-circle"></i><span class="menu-item"
+                        <router-link to="/product-list"><i class="feather icon-circle"></i><span class="menu-item"
                                 data-i18n="Shop">All Product</span></router-link>
                     </li>
                 </ul>

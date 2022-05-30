@@ -60,6 +60,6 @@ export const routes = [
     //product route
     { path: '/store-product', component: storeProduct, name: 'store-product'},
     { path: '/product-list', component: productList, name: 'product-list'},
-    { path: 'edit-product', component: editProduct, name: 'edit-product'}
+    { path: '/edit-product', component: editProduct, name: 'edit-product'}
 
   ]
