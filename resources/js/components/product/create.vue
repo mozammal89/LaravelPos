@@ -40,17 +40,16 @@
                     </div>
                     <div class="col-xl-4 col-md-6 col-12 mb-1">
                         <label for="basicSelect">Product Category</label>
-                        <select class="form-control" id="basicSelect">
-                            <option>IT</option>
-                            <option>Blade Runner</option>
-                            <option>Thor Ragnarok</option>
+                        <select class="form-control" id="basicSelect" v-model="form.category_id">
+                            <option value="">Select Category</option>
+                            <option :value="category.id" v-for="category in categories">{{category.category_name}}</option>
                         </select>
                     </div>
                     <div class="col-xl-4 col-md-6 col-12 mb-1">
                         <label for="basicSelect">Product Supplier</label>
-                        <select class="form-control" id="basicSelect">
-                            <option>IT</option>
-                            <option>Blade Runner</option>
+                        <select class="form-control" id="basicSelect" v-model="form.supplier_id">
+                            <option>Select supplier</option>
+                            <option :value="supplier.id" v-for="supplier in suppliers">{{supplier.name}}</option>
                             <option>Thor Ragnarok</option>
                         </select>
                     </div>
@@ -133,7 +132,7 @@
                     <div class="col-xl-1 col-md-6 col-12 mb-1">
                       <fieldset class="form-group">
                         <img
-                          :src="form.photo"
+                          :src="form.image"
                           style="height: 50px; width: 50px"
                         />
                       </fieldset>
@@ -168,16 +167,20 @@ export default {
   data() {
     return {
       form: {
-          name : null,
-          email : null,
-          phone : null,
-          salary : null,
-          nid : null,
-          joning_date : null,
-          address : null,
-          photo : null
+          category_id : null,
+          product_name : null,
+          product_code : null,
+          root : null,
+          buying_price : null,
+          selling_price : null,
+          supplier_id : null,
+          buying_date : null,
+          image : null,
+          product_quantity : null
       },
       errors: {},
+      categories: {},
+      suppliers: {},
     };
   },
   methods: {
@@ -190,7 +193,7 @@ export default {
         // console.log(event);
         let reader = new FileReader();
         reader.onload = event =>{
-          this.form.photo = event.target.result
+          this.form.image = event.target.result
           console.log(event.target.result);
         };
         reader.readAsDataURL(file);
@@ -207,6 +210,13 @@ export default {
       .catch(error => this.errors= error.response.data.errors)
     }
   },
+  created(){
+    axios.get('api/category/')
+    .then(({data})=>(this.categories=data))
+
+    axios.get('api/supplier/')
+    .then(({data})=>this.suppliers=data)
+  }
 };
 
 </script>

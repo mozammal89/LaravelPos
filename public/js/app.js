@@ -6610,6 +6610,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -6768,8 +6770,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
   created: function created() {
     if (!User.loggedIn()) {
       this.$router.push({
@@ -6780,16 +6781,20 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        name: null,
-        email: null,
-        phone: null,
-        salary: null,
-        nid: null,
-        joning_date: null,
-        address: null,
-        photo: null
+        category_id: null,
+        product_name: null,
+        product_code: null,
+        root: null,
+        buying_price: null,
+        selling_price: null,
+        supplier_id: null,
+        buying_date: null,
+        image: null,
+        product_quantity: null
       },
-      errors: {}
+      errors: {},
+      categories: {},
+      suppliers: {}
     };
   },
   methods: {
@@ -6806,7 +6811,7 @@ __webpack_require__.r(__webpack_exports__);
         var reader = new FileReader();
 
         reader.onload = function (event) {
-          _this.form.photo = event.target.result;
+          _this.form.image = event.target.result;
           console.log(event.target.result);
         };
 
@@ -6828,7 +6833,18 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
   }
-});
+}, "created", function created() {
+  var _this3 = this;
+
+  axios.get('api/category/').then(function (_ref) {
+    var data = _ref.data;
+    return _this3.categories = data;
+  });
+  axios.get('api/supplier/').then(function (_ref2) {
+    var data = _ref2.data;
+    return _this3.suppliers = data;
+  });
+}));
 
 /***/ }),
 
@@ -40944,9 +40960,125 @@ var render = function () {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(0),
+                      _c(
+                        "div",
+                        { staticClass: "col-xl-4 col-md-6 col-12 mb-1" },
+                        [
+                          _c("label", { attrs: { for: "basicSelect" } }, [
+                            _vm._v("Product Category"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.category_id,
+                                  expression: "form.category_id",
+                                },
+                              ],
+                              staticClass: "form-control",
+                              attrs: { id: "basicSelect" },
+                              on: {
+                                change: function ($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function (o) {
+                                      return o.selected
+                                    })
+                                    .map(function (o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.form,
+                                    "category_id",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                },
+                              },
+                            },
+                            [
+                              _c("option", { attrs: { value: "" } }, [
+                                _vm._v("Select Category"),
+                              ]),
+                              _vm._v(" "),
+                              _vm._l(_vm.categories, function (category) {
+                                return _c(
+                                  "option",
+                                  { domProps: { value: category.id } },
+                                  [_vm._v(_vm._s(category.category_name))]
+                                )
+                              }),
+                            ],
+                            2
+                          ),
+                        ]
+                      ),
                       _vm._v(" "),
-                      _vm._m(1),
+                      _c(
+                        "div",
+                        { staticClass: "col-xl-4 col-md-6 col-12 mb-1" },
+                        [
+                          _c("label", { attrs: { for: "basicSelect" } }, [
+                            _vm._v("Product Supplier"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.supplier_id,
+                                  expression: "form.supplier_id",
+                                },
+                              ],
+                              staticClass: "form-control",
+                              attrs: { id: "basicSelect" },
+                              on: {
+                                change: function ($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function (o) {
+                                      return o.selected
+                                    })
+                                    .map(function (o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.form,
+                                    "supplier_id",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                },
+                              },
+                            },
+                            [
+                              _c("option", [_vm._v("Select supplier")]),
+                              _vm._v(" "),
+                              _vm._l(_vm.suppliers, function (supplier) {
+                                return _c(
+                                  "option",
+                                  { domProps: { value: supplier.id } },
+                                  [_vm._v(_vm._s(supplier.name))]
+                                )
+                              }),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("Thor Ragnarok")]),
+                            ],
+                            2
+                          ),
+                        ]
+                      ),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -41186,13 +41318,13 @@ var render = function () {
                           _c("fieldset", { staticClass: "form-group" }, [
                             _c("img", {
                               staticStyle: { height: "50px", width: "50px" },
-                              attrs: { src: _vm.form.photo },
+                              attrs: { src: _vm.form.image },
                             }),
                           ]),
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(2),
+                      _vm._m(0),
                     ]),
                   ]
                 ),
@@ -41205,50 +41337,6 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xl-4 col-md-6 col-12 mb-1" }, [
-      _c("label", { attrs: { for: "basicSelect" } }, [
-        _vm._v("Product Category"),
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        { staticClass: "form-control", attrs: { id: "basicSelect" } },
-        [
-          _c("option", [_vm._v("IT")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Blade Runner")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Thor Ragnarok")]),
-        ]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xl-4 col-md-6 col-12 mb-1" }, [
-      _c("label", { attrs: { for: "basicSelect" } }, [
-        _vm._v("Product Supplier"),
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        { staticClass: "form-control", attrs: { id: "basicSelect" } },
-        [
-          _c("option", [_vm._v("IT")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Blade Runner")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Thor Ragnarok")]),
-        ]
-      ),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
