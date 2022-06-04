@@ -6,13 +6,13 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Add Product</h4>
-              <router-link class="btn btn-warning btn-sm" to="/employee-list"
+              <router-link class="btn btn-warning btn-sm" to="/product-list"
                 >Product List</router-link
               >
             </div>
             <div class="card-content">
               <div class="card-body">
-                <form class="employee" @submit.prevent="employeeInsert" enctype="multipart/form-data">
+                <form class="employee" @submit.prevent="productInsert" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-xl-4 col-md-6 col-12 mb-1">
                       <fieldset class="form-group">
@@ -200,11 +200,11 @@ export default {
       }
       
     },
-    employeeInsert(){
-      axios.post('api/employee',this.form)
+    productInsert(){
+      axios.post('api/product',this.form)
       .then(res => {
         // console.log(res);
-        this.$router.push({ name: 'employee-list'})
+        this.$router.push({ name: 'product-list'})
         Notification.success()
       })
       .catch(error => this.errors= error.response.data.errors)

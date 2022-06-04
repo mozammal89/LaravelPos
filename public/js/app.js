@@ -6818,13 +6818,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         reader.readAsDataURL(file);
       }
     },
-    employeeInsert: function employeeInsert() {
+    productInsert: function productInsert() {
       var _this2 = this;
 
-      axios.post('api/employee', this.form).then(function (res) {
+      axios.post('api/product', this.form).then(function (res) {
         // console.log(res);
         _this2.$router.push({
-          name: 'employee-list'
+          name: 'product-list'
         });
 
         Notification.success();
@@ -40852,7 +40852,7 @@ var render = function () {
                   "router-link",
                   {
                     staticClass: "btn btn-warning btn-sm",
-                    attrs: { to: "/employee-list" },
+                    attrs: { to: "/product-list" },
                   },
                   [_vm._v("Product List")]
                 ),
@@ -40870,7 +40870,7 @@ var render = function () {
                     on: {
                       submit: function ($event) {
                         $event.preventDefault()
-                        return _vm.employeeInsert.apply(null, arguments)
+                        return _vm.productInsert.apply(null, arguments)
                       },
                     },
                   },
