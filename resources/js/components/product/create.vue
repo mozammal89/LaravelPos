@@ -50,7 +50,7 @@
                         <select class="form-control" id="basicSelect" v-model="form.supplier_id">
                             <option>Select supplier</option>
                             <option :value="supplier.id" v-for="supplier in suppliers">{{supplier.name}}</option>
-                            <option>Thor Ragnarok</option>
+                            
                         </select>
                     </div>
                     <div class="col-xl-4 col-md-6 col-12 mb-1">
