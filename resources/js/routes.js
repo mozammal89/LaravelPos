@@ -69,6 +69,6 @@ export const routes = [
     //expanse route
     { path: '/store-expanse', component: storeExpanse, name: 'store-expanse'},
     { path: '/expanse-list', component: expanseList, name: 'expanse-list'},
-    { path: '/edit-expanse', component:editExpanse, name: 'edit-expanse'}
+    { path: '/edit-expanse/:id', component:editExpanse, name: 'edit-expanse'}
 
   ]

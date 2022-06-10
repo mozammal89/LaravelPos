@@ -54,7 +54,8 @@ class ExpanseController extends Controller
      */
     public function show($id)
     {
-        //
+        $expanse = DB::table('expanses')->where('id',$id)->first();
+        return response()->json($expanse);
     }
 
     /**
@@ -77,7 +78,12 @@ class ExpanseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // return $request;
+        $expanse = Expanse::find($id);
+        $expanse->amount = $request->amount;
+        $expanse->details = $request->details;
+        $expanse->expanse_date = $request->expanse_date;
+        $expanse->save();
     }
 
     /**
