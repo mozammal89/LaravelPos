@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Api\EmployeeController;
+use App\Http\Controllers\Api\ExpanseController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\SupplierController;
 
@@ -46,3 +47,7 @@ Route::apiResource('/category',CategoryController::class);
 
 //Product Route
 Route::apiResource('/product',ProductController::class);
+
+
+//Expanse Route
+Route::apiResource('/expanse',ExpanseController::class);

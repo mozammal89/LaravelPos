@@ -28,6 +28,10 @@ let storeProduct = require('./components/product/create.vue').default;
 let productList = require('./components/product/index.vue').default;
 let editProduct = require('./components/product/edit.vue').default;
 
+//expanse route
+let storeExpanse = require('./components/expanse/create.vue').default;
+let expanseList = require('./components/expanse/index.vue').default;
+let editExpanse = require('./components/expanse/edit.vue').default;
 
 
 
@@ -60,6 +64,11 @@ export const routes = [
     //product route
     { path: '/store-product', component: storeProduct, name: 'store-product'},
     { path: '/product-list', component: productList, name: 'product-list'},
-    { path: '/edit-product/:id', component: editProduct, name: 'edit-product'}
+    { path: '/edit-product/:id', component: editProduct, name: 'edit-product'},
+
+    //expanse route
+    { path: '/store-expanse', component: storeExpanse, name: 'store-expanse'},
+    { path: '/expanse-list', component: expanseList, name: 'expanse-list'},
+    { path: '/edit-expanse', component:editExpanse, name: 'edit-expanse'}
 
   ]
