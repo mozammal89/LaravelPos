@@ -16,7 +16,8 @@ class ExpanseController extends Controller
      */
     public function index()
     {
-        //
+        $expanse = Expanse::all();
+        return response()->json($expanse);
     }
 
     /**
@@ -87,6 +88,6 @@ class ExpanseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('expanses')->where('id', $id)->delete();
     }
 }
