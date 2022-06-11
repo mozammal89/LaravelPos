@@ -1,37 +1,44 @@
 
-//auth route start
+//auth component start
 let login = require('./components/auth/login.vue').default;
 let register = require('./components/auth/register.vue').default;
 let forget = require('./components/auth/forget.vue').default;
 let logout = require('./components/auth/logout').default;
-//auth route end
+//auth component end
 
 let home = require('./components/home.vue').default;
 
-//employee route
+//employee component
 let storeEmployee = require('./components/employee/create.vue').default;
 let employeeList = require('./components/employee/index.vue').default;
 let editEmployee = require('./components/employee/edit.vue').default;
 
-//supplier route
+//supplier component
 let storeSupplier = require('./components/supplier/create.vue').default;
 let supplierList = require('./components/supplier/index.vue').default;
 let editSupplier = require('./components/supplier/edit.vue').default;
 
-//category route
+//category component
 let storeCategory = require('./components/cateogry/create.vue').default;
 let categoryList = require('./components/cateogry/index.vue').default;
 let editCategory  = require('./components/cateogry/edit.vue').default;
 
-//product route
+//product component
 let storeProduct = require('./components/product/create.vue').default;
 let productList = require('./components/product/index.vue').default;
 let editProduct = require('./components/product/edit.vue').default;
 
-//expanse route
+//expanse component
 let storeExpanse = require('./components/expanse/create.vue').default;
 let expanseList = require('./components/expanse/index.vue').default;
 let editExpanse = require('./components/expanse/edit.vue').default;
+
+//salary component
+let salary = require('./components/salary/all_employee.vue').default;
+let paySalary = require('./components/salary/create.vue').default;
+let allSalary = require('./components/salary/index.vue').default;
+let viewSalary = require('./components/salary/view.vue').default;
+let editSalary = require('./components/salary/edit.vue').default;
 
 
 
@@ -69,6 +76,13 @@ export const routes = [
     //expanse route
     { path: '/store-expanse', component: storeExpanse, name: 'store-expanse'},
     { path: '/expanse-list', component: expanseList, name: 'expanse-list'},
-    { path: '/edit-expanse/:id', component:editExpanse, name: 'edit-expanse'}
+    { path: '/edit-expanse/:id', component:editExpanse, name: 'edit-expanse'},
+
+    //salary route
+    { path: '/given-salary', component: salary, name:'given-salary' },
+    { path: '/pay-salary/:id', component: paySalary, name:'pay-salary'},
+    { path: '/all-salary', component: allSalary, name:'all-salary'},
+    { path: '/view-salary/:id', component: viewSalary, name:'view-salary'},
+    { path: '/edit-salary/:id', component: editSalary, name:'edit-salary'}
 
   ]

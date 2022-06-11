@@ -11,6 +11,15 @@ class Notification{
         }).show();
     }
 
+    alradysuccess(){
+        new Noty({
+            type: 'success',
+            layout: 'topRight',
+            text: 'Salary Alrady Paid.',
+            timeout: 2000,
+        }).show();
+    }
+
 
     alert(){
         new Noty({

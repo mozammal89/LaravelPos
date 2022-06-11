@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Api\EmployeeController;
 use App\Http\Controllers\Api\ExpanseController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\SalaryController;
 use App\Http\Controllers\Api\SupplierController;
 
 /*
@@ -51,3 +52,10 @@ Route::apiResource('/product',ProductController::class);
 
 //Expanse Route
 Route::apiResource('/expanse',ExpanseController::class);
+
+//Salary Route
+Route::Post('/salary/paid/{id}',[SalaryController::class,'Paid'])->name('salary.paid');
+Route::Get('/salary',[SalaryController::class,'AllSalary'])->name('all.salary');
+Route::Get('/salary/view/{id}',[SalaryController::class,'ViewSalary'])->name('view.salary');
+Route::Get('/edit/salary/{id}',[SalaryController::class,'EditSalary'])->name('edit.salary');
+Route::Post('/salary/update/{id}',[SalaryController::class,'UpdateSalary'])->name('update.salary');
