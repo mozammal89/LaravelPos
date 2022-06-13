@@ -54,7 +54,7 @@ class ExpanseController extends Controller
      */
     public function show($id)
     {
-        $expanse = DB::table('expanses')->where('id',$id)->first();
+        $expanse = DB::table('expanses')->where('id', $id)->first();
         return response()->json($expanse);
     }
 

@@ -47,16 +47,16 @@ class CustomerController extends Controller
 
 
 
-        if($request->photo){
-            $position = strpos($request->photo,';');
-            $sub = substr($request->photo,0,$position);
+        if ($request->photo) {
+            $position = strpos($request->photo, ';');
+            $sub = substr($request->photo, 0, $position);
             $ext = explode('/', $sub)[1];
 
 
-            $name = time().".".$ext;
-            $img = Image::make($request->photo)->resize(240,200);
+            $name = time() . "." . $ext;
+            $img = Image::make($request->photo)->resize(240, 200);
             $upload_path = 'backend/customer/';
-            $image_url = $upload_path.$name;
+            $image_url = $upload_path . $name;
             $img->save($image_url);
 
             $customer = new Customer;
@@ -66,7 +66,7 @@ class CustomerController extends Controller
             $customer->address = $request->address;
             $customer->photo = $image_url;
             $customer->save();
-        }else{
+        } else {
             $customer = new Customer;
             $customer->name = $request->name;
             $customer->email = $request->email;
@@ -84,7 +84,7 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        $customer = DB::table('customers')->where('id',$id)->first();
+        $customer = DB::table('customers')->where('id', $id)->first();
         return response()->json($customer);
     }
 
@@ -108,35 +108,34 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if($request->newphoto){
+        if ($request->newphoto) {
 
             $customer = Customer::find($id);
 
-            $photo=$customer->photo;
+            $photo = $customer->photo;
 
-            if($photo){
+            if ($photo) {
                 $done = unlink($photo);
             }
 
-                $position = strpos($request->newphoto,';');
-                $sub = substr($request->newphoto,0,$position);
-                $ext = explode('/', $sub)[1];
+            $position = strpos($request->newphoto, ';');
+            $sub = substr($request->newphoto, 0, $position);
+            $ext = explode('/', $sub)[1];
 
 
-                $name = time().".".$ext;
-                $img = Image::make($request->newphoto)->resize(240,200);
-                $upload_path = 'backend/customer/';
-                $image_url = $upload_path.$name;
-                $img->save($image_url);
+            $name = time() . "." . $ext;
+            $img = Image::make($request->newphoto)->resize(240, 200);
+            $upload_path = 'backend/customer/';
+            $image_url = $upload_path . $name;
+            $img->save($image_url);
 
-                $customer->name = $request->name;
-                $customer->email = $request->email;
-                $customer->phone = $request->phone;
-                $customer->address = $request->address;
-                $customer->photo = $image_url;
-                $customer->save();
-            
-        }else{
+            $customer->name = $request->name;
+            $customer->email = $request->email;
+            $customer->phone = $request->phone;
+            $customer->address = $request->address;
+            $customer->photo = $image_url;
+            $customer->save();
+        } else {
             $customer = Customer::find($id);
             $customer->name = $request->name;
             $customer->email = $request->email;
@@ -156,11 +155,11 @@ class CustomerController extends Controller
     {
         // return $id;
         $customer = DB::table('customers')->where('id', $id)->first();
-        $photo=$customer->photo;
+        $photo = $customer->photo;
         if ($photo) {
             unlink($photo);
             DB::table('customers')->where('id', $id)->delete();
-        }else{
+        } else {
             DB::table('customers')->where('id', $id)->delete();
         }
     }

@@ -53,16 +53,16 @@ class EmployeeController extends Controller
         // $jdate = $rdate->format('Y-m-d');
 
 
-        if($request->photo){
-            $position = strpos($request->photo,';');
-            $sub = substr($request->photo,0,$position);
+        if ($request->photo) {
+            $position = strpos($request->photo, ';');
+            $sub = substr($request->photo, 0, $position);
             $ext = explode('/', $sub)[1];
 
 
-            $name = time().".".$ext;
-            $img = Image::make($request->photo)->resize(240,200);
+            $name = time() . "." . $ext;
+            $img = Image::make($request->photo)->resize(240, 200);
             $upload_path = 'backend/employee/';
-            $image_url = $upload_path.$name;
+            $image_url = $upload_path . $name;
             $img->save($image_url);
 
             $employee = new Employee;
@@ -75,7 +75,7 @@ class EmployeeController extends Controller
             $employee->address = $request->address;
             $employee->photo = $image_url;
             $employee->save();
-        }else{
+        } else {
             $employee = new Employee;
             $employee->name = $request->name;
             $employee->email = $request->email;
@@ -96,7 +96,7 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        $employee = DB::table('employees')->where('id',$id)->first();
+        $employee = DB::table('employees')->where('id', $id)->first();
         return response()->json($employee);
     }
 
@@ -120,39 +120,38 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-        if($request->newphoto){
+
+        if ($request->newphoto) {
 
             $employee = Employee::find($id);
 
-            $photo=$employee->photo;
+            $photo = $employee->photo;
 
-            if($photo){
+            if ($photo) {
                 $done = unlink($photo);
             }
 
-                $position = strpos($request->newphoto,';');
-                $sub = substr($request->newphoto,0,$position);
-                $ext = explode('/', $sub)[1];
+            $position = strpos($request->newphoto, ';');
+            $sub = substr($request->newphoto, 0, $position);
+            $ext = explode('/', $sub)[1];
 
 
-                $name = time().".".$ext;
-                $img = Image::make($request->newphoto)->resize(240,200);
-                $upload_path = 'backend/employee/';
-                $image_url = $upload_path.$name;
-                $img->save($image_url);
+            $name = time() . "." . $ext;
+            $img = Image::make($request->newphoto)->resize(240, 200);
+            $upload_path = 'backend/employee/';
+            $image_url = $upload_path . $name;
+            $img->save($image_url);
 
-                $employee->name = $request->name;
-                $employee->email = $request->email;
-                $employee->phone = $request->phone;
-                $employee->salary = $request->salary;
-                $employee->nid = $request->nid;
-                $employee->joning_date = $request->joning_date;
-                $employee->address = $request->address;
-                $employee->photo = $image_url;
-                $employee->save();
-            
-        }else{
+            $employee->name = $request->name;
+            $employee->email = $request->email;
+            $employee->phone = $request->phone;
+            $employee->salary = $request->salary;
+            $employee->nid = $request->nid;
+            $employee->joning_date = $request->joning_date;
+            $employee->address = $request->address;
+            $employee->photo = $image_url;
+            $employee->save();
+        } else {
             $employee = Employee::find($id);
             $employee->name = $request->name;
             $employee->email = $request->email;
@@ -163,7 +162,6 @@ class EmployeeController extends Controller
             $employee->address = $request->address;
             $employee->save();
         }
-        
     }
 
     /**
@@ -176,14 +174,12 @@ class EmployeeController extends Controller
     {
         // return $id;
         $employee = DB::table('employees')->where('id', $id)->first();
-        $photo=$employee->photo;
+        $photo = $employee->photo;
         if ($photo) {
             unlink($photo);
             DB::table('employees')->where('id', $id)->delete();
-        }else{
+        } else {
             DB::table('employees')->where('id', $id)->delete();
         }
     }
-
-    
 }

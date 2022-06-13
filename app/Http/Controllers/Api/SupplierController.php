@@ -48,16 +48,16 @@ class SupplierController extends Controller
             'phone' => 'required|unique:suppliers'
         ]);
 
-        if($request->photo){
-            $position = strpos($request->photo,';');
-            $sub = substr($request->photo,0,$position);
+        if ($request->photo) {
+            $position = strpos($request->photo, ';');
+            $sub = substr($request->photo, 0, $position);
             $ext = explode('/', $sub)[1];
 
 
-            $name = time().".".$ext;
-            $img = Image::make($request->photo)->resize(240,200);
+            $name = time() . "." . $ext;
+            $img = Image::make($request->photo)->resize(240, 200);
             $upload_path = 'backend/supplier/';
-            $image_url = $upload_path.$name;
+            $image_url = $upload_path . $name;
             $img->save($image_url);
 
             $employee = new Supplier();
@@ -68,7 +68,7 @@ class SupplierController extends Controller
             $employee->address = $request->address;
             $employee->photo = $image_url;
             $employee->save();
-        }else{
+        } else {
             $employee = new Supplier();
             $employee->name = $request->name;
             $employee->email = $request->email;
@@ -87,7 +87,7 @@ class SupplierController extends Controller
      */
     public function show($id)
     {
-        $supplier = DB::table('suppliers')->where('id',$id)->first();
+        $supplier = DB::table('suppliers')->where('id', $id)->first();
         return response()->json($supplier);
     }
 
@@ -112,42 +112,41 @@ class SupplierController extends Controller
     public function update(Request $request, $id)
     {
         // return $request;
-        if($request->newphoto){
+        if ($request->newphoto) {
 
 
             $supplier = Supplier::find($id);
 
-            
 
-            $photo=$supplier->photo;
 
-            if($photo){
+            $photo = $supplier->photo;
+
+            if ($photo) {
                 $done = unlink($photo);
             }
-            
-
-                $position = strpos($request->newphoto,';');
-                $sub = substr($request->newphoto,0,$position);
-                $ext = explode('/', $sub)[1];
 
 
-                $name = time().".".$ext;
-                $img = Image::make($request->newphoto)->resize(240,200);
-                $upload_path = 'backend/supplier/';
-                $image_url = $upload_path.$name;
-                $img->save($image_url);
-                
+            $position = strpos($request->newphoto, ';');
+            $sub = substr($request->newphoto, 0, $position);
+            $ext = explode('/', $sub)[1];
 
-                $supplier->name = $request->name;
-                $supplier->email = $request->email;
-                $supplier->phone = $request->phone;
-                $supplier->shopname = $request->shopname;
-                $supplier->address = $request->address;
-                $supplier->photo = $image_url;
 
-                $supplier->save();
-            
-        }else{
+            $name = time() . "." . $ext;
+            $img = Image::make($request->newphoto)->resize(240, 200);
+            $upload_path = 'backend/supplier/';
+            $image_url = $upload_path . $name;
+            $img->save($image_url);
+
+
+            $supplier->name = $request->name;
+            $supplier->email = $request->email;
+            $supplier->phone = $request->phone;
+            $supplier->shopname = $request->shopname;
+            $supplier->address = $request->address;
+            $supplier->photo = $image_url;
+
+            $supplier->save();
+        } else {
             $supplier = Supplier::find($id);
 
             // return $supplier;
