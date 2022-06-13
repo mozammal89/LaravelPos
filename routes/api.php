@@ -49,6 +49,9 @@ Route::apiResource('/category',CategoryController::class);
 //Product Route
 Route::apiResource('/product',ProductController::class);
 
+//product stock
+Route::Post('/stock/update/{id}',[ProductController::class,'stockUpdate'])->name('stock.update');
+
 
 //Expanse Route
 Route::apiResource('/expanse',ExpanseController::class);

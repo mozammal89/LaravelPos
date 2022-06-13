@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
+use Illuminate\Support\Arr;
 
 class ProductController extends Controller
 {
@@ -182,5 +183,13 @@ class ProductController extends Controller
         }else{
             DB::table('products')->where('id', $id)->delete();
         }
+    }
+
+
+    public function stockUpdate(Request $request,$id)
+    {
+        $data = array();
+        $data['product_quantity'] = $request->product_quantity;
+        DB::table('products')->where('id',$id)->update($data);
     }
 }

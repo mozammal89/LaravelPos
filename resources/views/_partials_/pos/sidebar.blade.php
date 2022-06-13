@@ -103,6 +103,10 @@
                     </li>
                 </ul>
             </li>
+            <li >
+                <router-link to="/stock"><i class="feather icon-circle"></i><span class="menu-item"
+                        data-i18n="Shop">Stock</span></router-link>
+            </li>
 
 
             {{-- <li class=" nav-item"><a href="#"><i class="feather icon-file-text"></i><span class="menu-title"
