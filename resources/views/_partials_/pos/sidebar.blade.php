@@ -103,9 +103,23 @@
                     </li>
                 </ul>
             </li>
-            <li >
+            <li>
                 <router-link to="/stock"><i class="feather icon-circle"></i><span class="menu-item"
                         data-i18n="Shop">Stock</span></router-link>
+            </li>
+
+            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title"
+                        data-i18n="Ecommerce">Customer</span></a>
+                <ul class="menu-content">
+                    <li>
+                        <router-link to="/store-customer"><i class="feather icon-plus"></i><span class="menu-item"
+                                data-i18n="Shop">Add Customer</span></router-link>
+                    </li>
+                    <li>
+                        <router-link to="/customer-list"><i class="feather icon-circle"></i><span class="menu-item"
+                                data-i18n="Shop">All Customer</span></router-link>
+                    </li>
+                </ul>
             </li>
 
 

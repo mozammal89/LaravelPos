@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\CustomerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -62,3 +63,7 @@ Route::Get('/salary',[SalaryController::class,'AllSalary'])->name('all.salary');
 Route::Get('/salary/view/{id}',[SalaryController::class,'ViewSalary'])->name('view.salary');
 Route::Get('/edit/salary/{id}',[SalaryController::class,'EditSalary'])->name('edit.salary');
 Route::Post('/salary/update/{id}',[SalaryController::class,'UpdateSalary'])->name('update.salary');
+
+
+//customer route
+Route::apiResource('/customer',CustomerController::class);
