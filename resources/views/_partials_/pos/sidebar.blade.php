@@ -16,6 +16,10 @@
                         </li>
                     </ul> --}}
             </li>
+            <li>
+                <router-link to="/pos"><i class="feather icon-circle"></i><span class="menu-item"
+                        data-i18n="Shop">POS</span></router-link>
+            </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title"
                         data-i18n="Ecommerce">Employee</span></a>
                 <ul class="menu-content">

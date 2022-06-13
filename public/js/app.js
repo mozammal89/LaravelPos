@@ -7533,6 +7533,416 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var _created$created$data;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_created$created$data = {
+  created: function created() {
+    if (!User.loggedIn()) {
+      this.$router.push({
+        name: "/"
+      });
+    }
+  }
+}, _defineProperty(_created$created$data, "created", function created() {
+  this.allProduct();
+}), _defineProperty(_created$created$data, "data", function data() {
+  return {
+    products: [],
+    searchTerm: ""
+  };
+}), _defineProperty(_created$created$data, "computed", {
+  filtersearch: function filtersearch() {
+    var _this = this;
+
+    return this.products.filter(function (product) {
+      return product.product_name.match(_this.searchTerm);
+    });
+  }
+}), _defineProperty(_created$created$data, "methods", {
+  allProduct: function allProduct() {
+    var _this2 = this;
+
+    axios.get("/api/product/").then(function (_ref) {
+      var data = _ref.data;
+      return _this2.products = data;
+    })["catch"](function (err) {
+      console.error(err);
+    });
+  }
+}), _created$created$data);
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/product/create.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/product/create.vue?vue&type=script&lang=js& ***!
@@ -10157,7 +10567,10 @@ var allCustomer = (__webpack_require__(/*! ./components/customer/index.vue */ ".
 
 var storeCustomer = (__webpack_require__(/*! ./components/customer/create.vue */ "./resources/js/components/customer/create.vue")["default"]);
 
-var editCustomer = (__webpack_require__(/*! ./components/customer/edit.vue */ "./resources/js/components/customer/edit.vue")["default"]);
+var editCustomer = (__webpack_require__(/*! ./components/customer/edit.vue */ "./resources/js/components/customer/edit.vue")["default"]); //pos component
+
+
+var pos = (__webpack_require__(/*! ./components/pos/pointofsale.vue */ "./resources/js/components/pos/pointofsale.vue")["default"]);
 
 var routes = [//auth rout start
 {
@@ -10289,6 +10702,11 @@ var routes = [//auth rout start
   path: '/edit-customer/:id',
   component: editCustomer,
   name: 'edit-customer'
+}, //pos router
+{
+  path: '/pos',
+  component: pos,
+  name: 'pos'
 }];
 
 /***/ }),
@@ -15386,6 +15804,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.emp_img{\n  height: 40px;\n  width: 40px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.emp_img {\n  height: 40px;\n  width: 40px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -36248,6 +36690,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/product/index.vue?vue&type=style&index=0&lang=css&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/product/index.vue?vue&type=style&index=0&lang=css& ***!
@@ -40746,6 +41218,47 @@ component.options.__file = "resources/js/components/home.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/pos/pointofsale.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/pos/pointofsale.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pointofsale.vue?vue&type=template&id=e7fc9010& */ "./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&");
+/* harmony import */ var _pointofsale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pointofsale.vue?vue&type=script&lang=js& */ "./resources/js/components/pos/pointofsale.vue?vue&type=script&lang=js&");
+/* harmony import */ var _pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pointofsale.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _pointofsale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__.render,
+  _pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pos/pointofsale.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/product/create.vue":
 /*!****************************************************!*\
   !*** ./resources/js/components/product/create.vue ***!
@@ -41541,6 +42054,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pos/pointofsale.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/pos/pointofsale.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/product/create.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************!*\
   !*** ./resources/js/components/product/create.vue?vue&type=script&lang=js& ***!
@@ -41784,6 +42313,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/expanse/index.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -42151,6 +42693,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_home_vue_vue_type_template_id_fa6affac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_home_vue_vue_type_template_id_fa6affac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./home.vue?vue&type=template&id=fa6affac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home.vue?vue&type=template&id=fa6affac&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=template&id=e7fc9010& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&");
 
 
 /***/ }),
@@ -46070,6 +46629,827 @@ var staticRenderFns = [
                     ]
                   ),
                 ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("section", { attrs: { id: "basic-input" } }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-5 col-12" }, [
+            _c("div", { staticClass: "card" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "card-header d-flex justify-content-between pb-0",
+                },
+                [
+                  _c("h4", { staticClass: "card-title" }, [
+                    _vm._v("Support Tracker"),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", {
+                  staticClass: "d-flex justify-content-between mt-1",
+                }),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-7 col-12" }, [
+            _c("div", { staticClass: "card" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "card-header d-flex justify-content-between pb-0",
+                },
+                [
+                  _c("h4", { staticClass: "card-title" }, [
+                    _vm._v("Product Sold"),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c(
+                  "div",
+                  { staticClass: "d-flex justify-content-between mt-1" },
+                  [
+                    _c(
+                      "section",
+                      {
+                        staticClass: "grid-view",
+                        attrs: { id: "ecommerce-products" },
+                      },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card ecommerce-card" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-img text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "img-fluid card-img-top",
+                                            staticStyle: { height: "200px" },
+                                            attrs: {
+                                              src: "/app-assets/images/pages/eCommerce/1.png",
+                                              alt: "img-placeholder",
+                                            },
+                                          }),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c("div", { staticClass: "item-wrapper" }, [
+                                      _c("div", [
+                                        _c(
+                                          "h6",
+                                          { staticClass: "item-price" },
+                                          [_vm._v("$339.99")]
+                                        ),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("h6", { staticClass: "item-name" }, [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-body",
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [_vm._v("Apple Watch Series 5")]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-options text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
+                                          attrs: { href: "javascript:void(0)" },
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "add-to-cart" },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card ecommerce-card" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-img text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "img-fluid card-img-top",
+                                            staticStyle: { height: "200px" },
+                                            attrs: {
+                                              src: "/app-assets/images/pages/eCommerce/2.png",
+                                              alt: "img-placeholder",
+                                            },
+                                          }),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c("div", { staticClass: "item-wrapper" }, [
+                                      _c("div", [
+                                        _c(
+                                          "h6",
+                                          { staticClass: "item-price" },
+                                          [_vm._v("$669.99")]
+                                        ),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("h6", { staticClass: "item-name" }, [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-body",
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _vm._v(
+                                            "Apple iPhone 11 (64GB, Black)"
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-options text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
+                                          attrs: { href: "javascript:void(0)" },
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "add-to-cart" },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card ecommerce-card" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-img text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "img-fluid card-img-top",
+                                            staticStyle: { height: "200px" },
+                                            attrs: {
+                                              src: "/app-assets/images/pages/eCommerce/3.png",
+                                              alt: "img-placeholder",
+                                            },
+                                          }),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c("div", { staticClass: "item-wrapper" }, [
+                                      _c("div", [
+                                        _c(
+                                          "div",
+                                          { staticClass: "item-cost" },
+                                          [
+                                            _c(
+                                              "h6",
+                                              { staticClass: "item-price" },
+                                              [_vm._v("$999.99")]
+                                            ),
+                                          ]
+                                        ),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("h6", { staticClass: "item-name" }, [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-body",
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [_vm._v("Apple iMac 27-inch")]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-options text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
+                                          attrs: { href: "javascript:void(0)" },
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "add-to-cart" },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card ecommerce-card" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-img text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "img-fluid card-img-top",
+                                            staticStyle: { height: "200px" },
+                                            attrs: {
+                                              src: "/app-assets/images/pages/eCommerce/4.png",
+                                              alt: "img-placeholder",
+                                            },
+                                          }),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c("div", { staticClass: "item-wrapper" }, [
+                                      _c("div", { staticClass: "item-cost" }, [
+                                        _c(
+                                          "h6",
+                                          { staticClass: "item-price" },
+                                          [_vm._v("$49.99")]
+                                        ),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("h6", { staticClass: "item-name" }, [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-body",
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [_vm._v("OneOdio A71 Wired Headphones")]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-options text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
+                                          attrs: { href: "javascript:void(0)" },
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "add-to-cart" },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card ecommerce-card" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-img text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "img-fluid card-img-top",
+                                            staticStyle: { height: "200px" },
+                                            attrs: {
+                                              src: "/app-assets/images/pages/eCommerce/5.png",
+                                              alt: "img-placeholder",
+                                            },
+                                          }),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c("div", { staticClass: "item-wrapper" }, [
+                                      _c("div", { staticClass: "item-cost" }, [
+                                        _c(
+                                          "h6",
+                                          { staticClass: "item-price" },
+                                          [_vm._v("$999.99")]
+                                        ),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("h6", { staticClass: "item-name" }, [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-body",
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _vm._v(
+                                            '\n                            Apple - MacBook Air® (Latest Model) - 13.3"\n                            Display - Silver\n                          '
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-options text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
+                                          attrs: { href: "javascript:void(0)" },
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "add-to-cart" },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card ecommerce-card" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-img text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "img-fluid card-img-top",
+                                            staticStyle: { height: "200px" },
+                                            attrs: {
+                                              src: "/app-assets/images/pages/eCommerce/6.png",
+                                              alt: "img-placeholder",
+                                            },
+                                          }),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c("div", { staticClass: "item-wrapper" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "item-rating" },
+                                        [
+                                          _c(
+                                            "ul",
+                                            {
+                                              staticClass:
+                                                "unstyled-list list-inline",
+                                            },
+                                            [
+                                              _c("li", {
+                                                staticClass:
+                                                  "ratings-list-item",
+                                              }),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "item-cost" }, [
+                                        _c(
+                                          "h6",
+                                          { staticClass: "item-price" },
+                                          [_vm._v("$429.99")]
+                                        ),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("h6", { staticClass: "item-name" }, [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-body",
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                            Switch Pro Controller\n                          "
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-options text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
+                                          attrs: { href: "javascript:void(0)" },
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "add-to-cart" },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card ecommerce-card" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-img text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "img-fluid card-img-top",
+                                            staticStyle: { height: "200px" },
+                                            attrs: {
+                                              src: "/app-assets/images/pages/eCommerce/7.png",
+                                              alt: "img-placeholder",
+                                            },
+                                          }),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c("div", { staticClass: "item-wrapper" }, [
+                                      _c("div", { staticClass: "item-cost" }, [
+                                        _c(
+                                          "h6",
+                                          { staticClass: "item-price" },
+                                          [_vm._v("$129.29")]
+                                        ),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("h6", { staticClass: "item-name" }, [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-body",
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                            Google - Google Home - White/Slate fabric\n                          "
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-options text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
+                                          attrs: { href: "javascript:void(0)" },
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "add-to-cart" },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "card ecommerce-card" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-img text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "img-fluid card-img-top",
+                                            staticStyle: { height: "200px" },
+                                            attrs: {
+                                              src: "/app-assets/images/pages/eCommerce/9.png",
+                                              alt: "img-placeholder",
+                                            },
+                                          }),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "card-body" }, [
+                                    _c("div", { staticClass: "item-wrapper" }, [
+                                      _c("div", { staticClass: "item-cost" }, [
+                                        _c(
+                                          "h6",
+                                          { staticClass: "item-price" },
+                                          [_vm._v("$14.99")]
+                                        ),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("h6", { staticClass: "item-name" }, [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-body",
+                                          attrs: {
+                                            href: "app-ecommerce-details.html",
+                                          },
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                            OnePlus 7 Pro\n                          "
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "item-options text-center" },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
+                                          attrs: { href: "javascript:void(0)" },
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "add-to-cart" },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
+                  ]
+                ),
               ]),
             ]),
           ]),
