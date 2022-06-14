@@ -7640,271 +7640,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_created$created$data = {
   created: function created() {
     if (!User.loggedIn()) {
@@ -15810,10 +15545,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.emp_img{\n  height: 40px;\n  width:
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -15827,7 +15562,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.emp_img {\n  height: 40px;\n  width: 40px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.emp_img[data-v-e7fc9010] {\n  height: 40px;\n  width: 40px;\n}\n.item-img img[data-v-e7fc9010]{\nheight: 200px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -36690,10 +36425,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -36703,7 +36438,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_id_e7fc9010_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css&");
 
             
 
@@ -36712,11 +36447,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_id_e7fc9010_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_id_e7fc9010_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -41229,9 +40964,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pointofsale.vue?vue&type=template&id=e7fc9010& */ "./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&");
+/* harmony import */ var _pointofsale_vue_vue_type_template_id_e7fc9010_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pointofsale.vue?vue&type=template&id=e7fc9010&scoped=true& */ "./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&scoped=true&");
 /* harmony import */ var _pointofsale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pointofsale.vue?vue&type=script&lang=js& */ "./resources/js/components/pos/pointofsale.vue?vue&type=script&lang=js&");
-/* harmony import */ var _pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pointofsale.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _pointofsale_vue_vue_type_style_index_0_id_e7fc9010_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css& */ "./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -41243,11 +40978,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _pointofsale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__.render,
-  _pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _pointofsale_vue_vue_type_template_id_e7fc9010_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _pointofsale_vue_vue_type_template_id_e7fc9010_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  null,
+  "e7fc9010",
   null
   
 )
@@ -42317,15 +42052,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css& ***!
-  \**************************************************************************************/
+/***/ "./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css& ***!
+  \**************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_style_index_0_id_e7fc9010_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=style&index=0&id=e7fc9010&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -42697,19 +42432,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&":
-/*!************************************************************************************!*\
-  !*** ./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010& ***!
-  \************************************************************************************/
+/***/ "./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&scoped=true&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&scoped=true& ***!
+  \************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=template&id=e7fc9010& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_pointofsale_vue_vue_type_template_id_e7fc9010_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./pointofsale.vue?vue&type=template&id=e7fc9010&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&scoped=true&");
 
 
 /***/ }),
@@ -46643,10 +46378,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&":
-/*!***************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010& ***!
-  \***************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pos/pointofsale.vue?vue&type=template&id=e7fc9010&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -46659,803 +46394,344 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("section", { attrs: { id: "basic-input" } }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-5 col-12" }, [
-            _c("div", { staticClass: "card" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "card-header d-flex justify-content-between pb-0",
-                },
-                [
-                  _c("h4", { staticClass: "card-title" }, [
-                    _vm._v("Support Tracker"),
-                  ]),
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("div", {
-                  staticClass: "d-flex justify-content-between mt-1",
-                }),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-7 col-12" }, [
-            _c("div", { staticClass: "card" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "card-header d-flex justify-content-between pb-0",
-                },
-                [
-                  _c("h4", { staticClass: "card-title" }, [
-                    _vm._v("Product Sold"),
-                  ]),
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c(
-                  "div",
-                  { staticClass: "d-flex justify-content-between mt-1" },
-                  [
-                    _c(
-                      "section",
-                      {
-                        staticClass: "grid-view",
-                        attrs: { id: "ecommerce-products" },
+  return _c("div", [
+    _c("section", { attrs: { id: "basic-input" } }, [
+      _c("div", { staticClass: "row" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-7 col-12" }, [
+          _c("div", { staticClass: "card" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "ul",
+              { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
+              [
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-link active",
+                      attrs: {
+                        id: "homeIcon-tab",
+                        "data-toggle": "tab",
+                        href: "#homeIcon",
+                        "aria-controls": "home",
+                        role: "tab",
+                        "aria-selected": "true",
                       },
-                      [
-                        _c("div", { staticClass: "row" }, [
+                    },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "feather feather-home",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            width: "14",
+                            height: "14",
+                            viewBox: "0 0 24 24",
+                            fill: "none",
+                            stroke: "currentColor",
+                            "stroke-width": "2",
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                          },
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              d: "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",
+                            },
+                          }),
+                          _c("polyline", {
+                            attrs: { points: "9 22 9 12 15 12 15 22" },
+                          }),
+                        ]
+                      ),
+                      _vm._v(" All Products"),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-link",
+                      attrs: {
+                        id: "profileIcon-tab",
+                        "data-toggle": "tab",
+                        href: "#profileIcon",
+                        "aria-controls": "profile",
+                        role: "tab",
+                        "aria-selected": "false",
+                      },
+                    },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "feather feather-tool",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            width: "14",
+                            height: "14",
+                            viewBox: "0 0 24 24",
+                            fill: "none",
+                            stroke: "currentColor",
+                            "stroke-width": "2",
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                          },
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              d: "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z",
+                            },
+                          }),
+                        ]
+                      ),
+                      _vm._v(" Category"),
+                    ]
+                  ),
+                ]),
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "tab-content" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "tab-pane active",
+                  attrs: {
+                    id: "homeIcon",
+                    "aria-labelledby": "homeIcon-tab",
+                    role: "tabpanel",
+                  },
+                },
+                [
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.searchTerm,
+                          expression: "searchTerm",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      staticStyle: { width: "600px" },
+                      attrs: { type: "text", placeholder: "Search here" },
+                      domProps: { value: _vm.searchTerm },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.searchTerm = $event.target.value
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "justify-content-between mt-1" }, [
+                      _c(
+                        "section",
+                        {
+                          staticClass: "grid-view",
+                          attrs: { id: "ecommerce-products" },
+                        },
+                        [
                           _c(
                             "div",
-                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
-                            [
-                              _c(
+                            { staticClass: "row" },
+                            _vm._l(_vm.filtersearch, function (product) {
+                              return _c(
                                 "div",
-                                { staticClass: "card ecommerce-card" },
+                                {
+                                  key: product.id,
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-6 col-6",
+                                },
                                 [
                                   _c(
                                     "div",
-                                    { staticClass: "item-img text-center" },
+                                    { staticClass: "card ecommerce-card" },
                                     [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            staticClass:
-                                              "img-fluid card-img-top",
-                                            staticStyle: { height: "200px" },
-                                            attrs: {
-                                              src: "/app-assets/images/pages/eCommerce/1.png",
-                                              alt: "img-placeholder",
-                                            },
-                                          }),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "card-body" }, [
-                                    _c("div", { staticClass: "item-wrapper" }, [
-                                      _c("div", [
-                                        _c(
-                                          "h6",
-                                          { staticClass: "item-price" },
-                                          [_vm._v("$339.99")]
-                                        ),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", { staticClass: "item-name" }, [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "text-body",
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [_vm._v("Apple Watch Series 5")]
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-options text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
-                                          attrs: { href: "javascript:void(0)" },
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "add-to-cart" },
-                                            [_vm._v("Add to cart")]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "card ecommerce-card" },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-img text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            staticClass:
-                                              "img-fluid card-img-top",
-                                            staticStyle: { height: "200px" },
-                                            attrs: {
-                                              src: "/app-assets/images/pages/eCommerce/2.png",
-                                              alt: "img-placeholder",
-                                            },
-                                          }),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "card-body" }, [
-                                    _c("div", { staticClass: "item-wrapper" }, [
-                                      _c("div", [
-                                        _c(
-                                          "h6",
-                                          { staticClass: "item-price" },
-                                          [_vm._v("$669.99")]
-                                        ),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", { staticClass: "item-name" }, [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "text-body",
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Apple iPhone 11 (64GB, Black)"
-                                          ),
-                                        ]
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-options text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
-                                          attrs: { href: "javascript:void(0)" },
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "add-to-cart" },
-                                            [_vm._v("Add to cart")]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "card ecommerce-card" },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-img text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            staticClass:
-                                              "img-fluid card-img-top",
-                                            staticStyle: { height: "200px" },
-                                            attrs: {
-                                              src: "/app-assets/images/pages/eCommerce/3.png",
-                                              alt: "img-placeholder",
-                                            },
-                                          }),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "card-body" }, [
-                                    _c("div", { staticClass: "item-wrapper" }, [
-                                      _c("div", [
-                                        _c(
-                                          "div",
-                                          { staticClass: "item-cost" },
-                                          [
-                                            _c(
-                                              "h6",
-                                              { staticClass: "item-price" },
-                                              [_vm._v("$999.99")]
-                                            ),
-                                          ]
-                                        ),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", { staticClass: "item-name" }, [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "text-body",
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [_vm._v("Apple iMac 27-inch")]
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-options text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
-                                          attrs: { href: "javascript:void(0)" },
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "add-to-cart" },
-                                            [_vm._v("Add to cart")]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "card ecommerce-card" },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-img text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            staticClass:
-                                              "img-fluid card-img-top",
-                                            staticStyle: { height: "200px" },
-                                            attrs: {
-                                              src: "/app-assets/images/pages/eCommerce/4.png",
-                                              alt: "img-placeholder",
-                                            },
-                                          }),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "card-body" }, [
-                                    _c("div", { staticClass: "item-wrapper" }, [
-                                      _c("div", { staticClass: "item-cost" }, [
-                                        _c(
-                                          "h6",
-                                          { staticClass: "item-price" },
-                                          [_vm._v("$49.99")]
-                                        ),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", { staticClass: "item-name" }, [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "text-body",
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [_vm._v("OneOdio A71 Wired Headphones")]
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-options text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
-                                          attrs: { href: "javascript:void(0)" },
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "add-to-cart" },
-                                            [_vm._v("Add to cart")]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "card ecommerce-card" },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-img text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            staticClass:
-                                              "img-fluid card-img-top",
-                                            staticStyle: { height: "200px" },
-                                            attrs: {
-                                              src: "/app-assets/images/pages/eCommerce/5.png",
-                                              alt: "img-placeholder",
-                                            },
-                                          }),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "card-body" }, [
-                                    _c("div", { staticClass: "item-wrapper" }, [
-                                      _c("div", { staticClass: "item-cost" }, [
-                                        _c(
-                                          "h6",
-                                          { staticClass: "item-price" },
-                                          [_vm._v("$999.99")]
-                                        ),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", { staticClass: "item-name" }, [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "text-body",
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _vm._v(
-                                            '\n                            Apple - MacBook Air® (Latest Model) - 13.3"\n                            Display - Silver\n                          '
-                                          ),
-                                        ]
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-options text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
-                                          attrs: { href: "javascript:void(0)" },
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "add-to-cart" },
-                                            [_vm._v("Add to cart")]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "card ecommerce-card" },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-img text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            staticClass:
-                                              "img-fluid card-img-top",
-                                            staticStyle: { height: "200px" },
-                                            attrs: {
-                                              src: "/app-assets/images/pages/eCommerce/6.png",
-                                              alt: "img-placeholder",
-                                            },
-                                          }),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "card-body" }, [
-                                    _c("div", { staticClass: "item-wrapper" }, [
                                       _c(
                                         "div",
-                                        { staticClass: "item-rating" },
+                                        { staticClass: "item-img text-center" },
                                         [
                                           _c(
-                                            "ul",
+                                            "a",
                                             {
-                                              staticClass:
-                                                "unstyled-list list-inline",
+                                              attrs: {
+                                                href: "app-ecommerce-details.html",
+                                              },
                                             },
                                             [
-                                              _c("li", {
+                                              _c("img", {
                                                 staticClass:
-                                                  "ratings-list-item",
+                                                  "img-fluid card-img-top",
+                                                attrs: {
+                                                  src: product.image,
+                                                  alt: "img-placeholder",
+                                                },
                                               }),
                                             ]
                                           ),
                                         ]
                                       ),
                                       _vm._v(" "),
-                                      _c("div", { staticClass: "item-cost" }, [
+                                      _c("div", { staticClass: "card-body" }, [
                                         _c(
-                                          "h6",
-                                          { staticClass: "item-price" },
-                                          [_vm._v("$429.99")]
+                                          "div",
+                                          { staticClass: "item-wrapper" },
+                                          [
+                                            _c("div", [
+                                              _c(
+                                                "h6",
+                                                { staticClass: "item-price" },
+                                                [
+                                                  _vm._v(
+                                                    "BDT " +
+                                                      _vm._s(
+                                                        product.selling_price
+                                                      )
+                                                  ),
+                                                ]
+                                              ),
+                                            ]),
+                                          ]
                                         ),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", { staticClass: "item-name" }, [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "text-body",
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                            Switch Pro Controller\n                          "
-                                          ),
-                                        ]
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-options text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
-                                          attrs: { href: "javascript:void(0)" },
-                                        },
-                                        [
+                                        _vm._v(" "),
+                                        _c("h6", { staticClass: "item-name" }, [
                                           _c(
-                                            "span",
-                                            { staticClass: "add-to-cart" },
-                                            [_vm._v("Add to cart")]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "card ecommerce-card" },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-img text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            staticClass:
-                                              "img-fluid card-img-top",
-                                            staticStyle: { height: "200px" },
-                                            attrs: {
-                                              src: "/app-assets/images/pages/eCommerce/7.png",
-                                              alt: "img-placeholder",
+                                            "a",
+                                            {
+                                              staticClass: "text-body",
+                                              attrs: {
+                                                href: "app-ecommerce-details.html",
+                                              },
                                             },
-                                          }),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "card-body" }, [
-                                    _c("div", { staticClass: "item-wrapper" }, [
-                                      _c("div", { staticClass: "item-cost" }, [
-                                        _c(
-                                          "h6",
-                                          { staticClass: "item-price" },
-                                          [_vm._v("$129.29")]
-                                        ),
+                                            [
+                                              _vm._v(
+                                                _vm._s(product.product_name)
+                                              ),
+                                            ]
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        product.product_quantity >= 1
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "badge badge-success",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Available " +
+                                                    _vm._s(
+                                                      product.product_quantity
+                                                    )
+                                                ),
+                                              ]
+                                            )
+                                          : _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "badge badge-danger",
+                                              },
+                                              [_vm._v("Stock Out")]
+                                            ),
                                       ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", { staticClass: "item-name" }, [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "text-body",
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                            Google - Google Home - White/Slate fabric\n                          "
-                                          ),
-                                        ]
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-options text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
-                                          attrs: { href: "javascript:void(0)" },
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "add-to-cart" },
-                                            [_vm._v("Add to cart")]
-                                          ),
-                                        ]
-                                      ),
+                                      _vm._v(" "),
+                                      _c("div", {
+                                        staticClass: "item-options text-center",
+                                      }),
                                     ]
                                   ),
                                 ]
-                              ),
-                            ]
+                              )
+                            }),
+                            0
                           ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-4 col-md-4 col-sm-6 col-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "card ecommerce-card" },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-img text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            staticClass:
-                                              "img-fluid card-img-top",
-                                            staticStyle: { height: "200px" },
-                                            attrs: {
-                                              src: "/app-assets/images/pages/eCommerce/9.png",
-                                              alt: "img-placeholder",
-                                            },
-                                          }),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "card-body" }, [
-                                    _c("div", { staticClass: "item-wrapper" }, [
-                                      _c("div", { staticClass: "item-cost" }, [
-                                        _c(
-                                          "h6",
-                                          { staticClass: "item-price" },
-                                          [_vm._v("$14.99")]
-                                        ),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", { staticClass: "item-name" }, [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "text-body",
-                                          attrs: {
-                                            href: "app-ecommerce-details.html",
-                                          },
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                            OnePlus 7 Pro\n                          "
-                                          ),
-                                        ]
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "item-options text-center" },
-                                    [
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "\n                            btn btn-primary btn-cart\n                            waves-effect waves-float waves-light\n                          ",
-                                          attrs: { href: "javascript:void(0)" },
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "add-to-cart" },
-                                            [_vm._v("Add to cart")]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(2),
             ]),
           ]),
         ]),
       ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-5 col-12" }, [
+      _c("div", { staticClass: "card" }, [
+        _c(
+          "div",
+          { staticClass: "card-header d-flex justify-content-between pb-0" },
+          [_c("h4", { staticClass: "card-title" }, [_vm._v("Support Tracker")])]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "d-flex justify-content-between mt-1" }),
+        ]),
+      ]),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "card-header d-flex justify-content-between pb-0" },
+      [_c("h4", { staticClass: "card-title" }, [_vm._v("Product Sold")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "tab-pane",
+        attrs: {
+          id: "profileIcon",
+          "aria-labelledby": "profileIcon-tab",
+          role: "tabpanel",
+        },
+      },
+      [
+        _c("p", [
+          _vm._v(
+            "\n              Dragée jujubes caramels tootsie roll gummies gummies icing bonbon. Candy jujubes cake cotton candy.\n              Jelly-o lollipop oat cake marshmallow fruitcake candy canes toffee. Jelly oat cake pudding jelly beans\n              brownie lemon drops ice cream halvah muffin. Brownie candy tiramisu macaroon tootsie roll danish.\n            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n              Croissant pie cheesecake sweet roll. Gummi bears cotton candy tart jelly-o caramels apple pie jelly\n              danish marshmallow. Icing caramels lollipop topping. Bear claw powder sesame snaps.\n            "
+          ),
+        ]),
+      ]
+    )
   },
 ]
 render._withStripped = true
