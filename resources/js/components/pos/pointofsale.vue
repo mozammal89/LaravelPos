@@ -5,11 +5,80 @@
         <div class="col-lg-5 col-12">
           <div class="card">
             <div class="card-header d-flex justify-content-between pb-0">
-              <h4 class="card-title">Support Tracker</h4>
+              <h6 class="card-title">Expanse Insert</h6>
+              <a href="" class="btn btn-sm btn-info">Add Customer</a>
             </div>
-            <div class="card-body">
-              <div class="d-flex justify-content-between mt-1"></div>
-            </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Qty</th>
+                  <th>Unit</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#">Name</a></td>
+                  <td>Qty</td>
+                  <td>Unit</td>
+                  <td>Total</td>
+                  <td><a href="#" class="btn btn-sm btn-danger">X</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">Total Quantity:
+              <strong>50</strong>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">Sub Total:
+              <strong>BDT 120.00</strong>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">Vat:
+              <strong>BDT 00.00</strong>
+            </li>
+            
+            <li class="list-group-item d-flex justify-content-between align-items-center">Total:
+              <strong>BDT 120.00</strong>
+            </li>
+          </ul>
+        <br>
+        <form>
+          <label>Customer name</label>
+          <select class="form-control" v-model="customer_id">
+            <option value="">Sohel</option>
+            <option value="">Moriom</option>
+            <option value="">Mozamml</option>
+            <option value="">Ador</option>
+          </select>
+
+          <label for="pay">Pay</label>
+          <input type="text" class="form-control" required="" v-model="pay">
+
+          <label for="pay">Due</label>
+          <input type="text" class="form-control" required="" v-model="due">
+
+          <label>Pay By</label>
+          <select class="form-control" v-model="customer_id">
+            <option value="">Cash</option>
+            <option value="">Check</option>
+            <option value="">Card</option>
+            <option value="">MFS</option>
+            <option value="">Gift Card</option>
+          </select>
+          <br>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+
+        </div>
           </div>
         </div>
 
