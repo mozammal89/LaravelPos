@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\ExpanseController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\SalaryController;
 use App\Http\Controllers\Api\SupplierController;
+use App\Http\Controllers\Apo\PosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +68,6 @@ Route::Post('/salary/update/{id}',[SalaryController::class,'UpdateSalary'])->nam
 
 //customer route
 Route::apiResource('/customer',CustomerController::class);
+
+//pos route
+Route::get('/getting/product/{id}',[PosController::class,'getProduct'])->name('get.product');

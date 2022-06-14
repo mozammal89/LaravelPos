@@ -7640,6 +7640,99 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_created$created$data = {
   created: function created() {
     if (!User.loggedIn()) {
@@ -7650,9 +7743,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 }, _defineProperty(_created$created$data, "created", function created() {
   this.allProduct();
+  this.allCategory();
 }), _defineProperty(_created$created$data, "data", function data() {
   return {
     products: [],
+    categories: "",
+    getproducts: [],
     searchTerm: ""
   };
 }), _defineProperty(_created$created$data, "computed", {
@@ -7662,14 +7758,41 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return this.products.filter(function (product) {
       return product.product_name.match(_this.searchTerm);
     });
+  },
+  getfiltersearch: function getfiltersearch() {
+    var _this2 = this;
+
+    return this.getproducts.filter(function (getproduct) {
+      return getproduct.product_name.match(_this2.searchTerm);
+    });
   }
 }), _defineProperty(_created$created$data, "methods", {
   allProduct: function allProduct() {
-    var _this2 = this;
+    var _this3 = this;
 
     axios.get("/api/product/").then(function (_ref) {
       var data = _ref.data;
-      return _this2.products = data;
+      return _this3.products = data;
+    })["catch"](function (err) {
+      console.error(err);
+    });
+  },
+  allCategory: function allCategory() {
+    var _this4 = this;
+
+    axios.get("/api/category/").then(function (_ref2) {
+      var data = _ref2.data;
+      return _this4.categories = data;
+    })["catch"](function (err) {
+      console.error(err);
+    });
+  },
+  subProduct: function subProduct(id) {
+    var _this5 = this;
+
+    axios.get("/api/getting/product/" + id).then(function (_ref3) {
+      var data = _ref3.data;
+      return _this5.getproducts = data;
     })["catch"](function (err) {
       console.error(err);
     });
@@ -15562,7 +15685,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.emp_img[data-v-e7fc9010] {\n  height: 40px;\n  width: 40px;\n}\n.item-img img[data-v-e7fc9010]{\nheight: 200px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.emp_img[data-v-e7fc9010] {\n  height: 40px;\n  width: 40px;\n}\n.item-img img[data-v-e7fc9010] {\n  height: 200px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -46407,97 +46530,43 @@ var render = function () {
               "ul",
               { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
               [
-                _c("li", { staticClass: "nav-item" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "nav-link active",
-                      attrs: {
-                        id: "homeIcon-tab",
-                        "data-toggle": "tab",
-                        href: "#homeIcon",
-                        "aria-controls": "home",
-                        role: "tab",
-                        "aria-selected": "true",
-                      },
-                    },
-                    [
-                      _c(
-                        "svg",
-                        {
-                          staticClass: "feather feather-home",
-                          attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            width: "14",
-                            height: "14",
-                            viewBox: "0 0 24 24",
-                            fill: "none",
-                            stroke: "currentColor",
-                            "stroke-width": "2",
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round",
-                          },
-                        },
-                        [
-                          _c("path", {
-                            attrs: {
-                              d: "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",
-                            },
-                          }),
-                          _c("polyline", {
-                            attrs: { points: "9 22 9 12 15 12 15 22" },
-                          }),
-                        ]
-                      ),
-                      _vm._v(" All Products"),
-                    ]
-                  ),
-                ]),
+                _vm._m(2),
                 _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "nav-link",
-                      attrs: {
-                        id: "profileIcon-tab",
-                        "data-toggle": "tab",
-                        href: "#profileIcon",
-                        "aria-controls": "profile",
-                        role: "tab",
-                        "aria-selected": "false",
-                      },
-                    },
+                _vm._l(_vm.categories, function (category) {
+                  return _c(
+                    "li",
+                    { key: category.id, staticClass: "nav-item" },
                     [
                       _c(
-                        "svg",
+                        "a",
                         {
-                          staticClass: "feather feather-tool",
+                          staticClass: "nav-link",
                           attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            width: "14",
-                            height: "14",
-                            viewBox: "0 0 24 24",
-                            fill: "none",
-                            stroke: "currentColor",
-                            "stroke-width": "2",
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round",
+                            id: "profileIcon-tab",
+                            "data-toggle": "tab",
+                            href: "#profileIcon",
+                            "aria-controls": "profile",
+                            role: "tab",
+                            "aria-selected": "false",
+                          },
+                          on: {
+                            click: function ($event) {
+                              return _vm.subProduct(category.id)
+                            },
                           },
                         },
                         [
-                          _c("path", {
-                            attrs: {
-                              d: "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z",
-                            },
-                          }),
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(category.category_name)
+                          ),
                         ]
                       ),
-                      _vm._v(" Category"),
                     ]
-                  ),
-                ]),
-              ]
+                  )
+                }),
+              ],
+              2
             ),
             _vm._v(" "),
             _c("div", { staticClass: "tab-content" }, [
@@ -46596,10 +46665,11 @@ var render = function () {
                                                 { staticClass: "item-price" },
                                                 [
                                                   _vm._v(
-                                                    "BDT " +
+                                                    "\n                                  BDT " +
                                                       _vm._s(
                                                         product.selling_price
-                                                      )
+                                                      ) +
+                                                      "\n                                "
                                                   ),
                                                 ]
                                               ),
@@ -46667,7 +46737,172 @@ var render = function () {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(2),
+              _c(
+                "div",
+                {
+                  staticClass: "tab-pane",
+                  attrs: {
+                    id: "profileIcon",
+                    "aria-labelledby": "profileIcon-tab",
+                    role: "tabpanel",
+                  },
+                },
+                [
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.searchTerm,
+                          expression: "searchTerm",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      staticStyle: { width: "600px" },
+                      attrs: { type: "text", placeholder: "Search here" },
+                      domProps: { value: _vm.searchTerm },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.searchTerm = $event.target.value
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "justify-content-between mt-1" }, [
+                      _c(
+                        "section",
+                        {
+                          staticClass: "grid-view",
+                          attrs: { id: "ecommerce-products" },
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "row" },
+                            _vm._l(_vm.getfiltersearch, function (getproduct) {
+                              return _c(
+                                "div",
+                                {
+                                  key: getproduct.id,
+                                  staticClass:
+                                    "col-lg-4 col-md-4 col-sm-6 col-6",
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "card ecommerce-card" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "item-img text-center" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                href: "app-ecommerce-details.html",
+                                              },
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass:
+                                                  "img-fluid card-img-top",
+                                                attrs: {
+                                                  src: getproduct.image,
+                                                  alt: "img-placeholder",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "card-body" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "item-wrapper" },
+                                          [
+                                            _c("div", [
+                                              _c(
+                                                "h6",
+                                                { staticClass: "item-price" },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                  BDT " +
+                                                      _vm._s(
+                                                        getproduct.selling_price
+                                                      ) +
+                                                      "\n                                "
+                                                  ),
+                                                ]
+                                              ),
+                                            ]),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("h6", { staticClass: "item-name" }, [
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass: "text-body",
+                                              attrs: {
+                                                href: "app-ecommerce-details.html",
+                                              },
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(getproduct.product_name)
+                                              ),
+                                            ]
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        getproduct.product_quantity >= 1
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "badge badge-success",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Available " +
+                                                    _vm._s(
+                                                      getproduct.product_quantity
+                                                    )
+                                                ),
+                                              ]
+                                            )
+                                          : _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "badge badge-danger",
+                                              },
+                                              [_vm._v("Stock Out")]
+                                            ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", {
+                                        staticClass: "item-options text-center",
+                                      }),
+                                    ]
+                                  ),
+                                ]
+                              )
+                            }),
+                            0
+                          ),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
             ]),
           ]),
         ]),
@@ -46708,30 +46943,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "tab-pane",
-        attrs: {
-          id: "profileIcon",
-          "aria-labelledby": "profileIcon-tab",
-          role: "tabpanel",
+    return _c("li", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link active",
+          attrs: {
+            id: "homeIcon-tab",
+            "data-toggle": "tab",
+            href: "#homeIcon",
+            "aria-controls": "home",
+            role: "tab",
+            "aria-selected": "true",
+          },
         },
-      },
-      [
-        _c("p", [
-          _vm._v(
-            "\n              Dragée jujubes caramels tootsie roll gummies gummies icing bonbon. Candy jujubes cake cotton candy.\n              Jelly-o lollipop oat cake marshmallow fruitcake candy canes toffee. Jelly oat cake pudding jelly beans\n              brownie lemon drops ice cream halvah muffin. Brownie candy tiramisu macaroon tootsie roll danish.\n            "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "\n              Croissant pie cheesecake sweet roll. Gummi bears cotton candy tart jelly-o caramels apple pie jelly\n              danish marshmallow. Icing caramels lollipop topping. Bear claw powder sesame snaps.\n            "
-          ),
-        ]),
-      ]
-    )
+        [_vm._v("\n                All Products")]
+      ),
+    ])
   },
 ]
 render._withStripped = true
