@@ -20,6 +20,23 @@ class Notification{
         }).show();
     }
 
+    cart_success(){
+        new Noty({
+            type: 'success',
+            layout: 'topRight',
+            text: 'Successfully Add To Cart',
+            timeout: 2000,
+        }).show();
+    }
+    item_remove(){
+        new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'Item Remove Successfully',
+            timeout: 2000,
+        }).show();
+    }
+
 
     alert(){
         new Noty({

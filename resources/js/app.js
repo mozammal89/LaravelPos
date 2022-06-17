@@ -38,6 +38,9 @@ const Toast = Swal.mixin({
 
 //sweet alert end
 
+//windo reload
+window.Reload = new Vue();
+
 const router = new VueRouter({
     routes,
     mode:'history'

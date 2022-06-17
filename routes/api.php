@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CartController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CustomerController;
 use Illuminate\Http\Request;
@@ -10,7 +11,7 @@ use App\Http\Controllers\Api\ExpanseController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\SalaryController;
 use App\Http\Controllers\Api\SupplierController;
-use App\Http\Controllers\Apo\PosController;
+use App\Http\Controllers\Api\PosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,8 @@ Route::apiResource('/customer',CustomerController::class);
 
 //pos route
 Route::get('/getting/product/{id}',[PosController::class,'getProduct'])->name('get.product');
+
+// cart route 
+Route::get('/addToCart/{id}',[CartController::class,'addToCart'])->name('add.to.cart');
+Route::get('/cart/product/',[CartController::class,'cartProduct'])->name('cart.product');
+Route::get('/removeItem/{id}',[CartController::class,'removeItem'])->name('remove.item');

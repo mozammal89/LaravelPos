@@ -21,17 +21,12 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="cart in carts" :key="cart.id">
-                  <td>{{cart.product_name}}</td>
-                  <td>
-                    <span></span>
-                    <button class="btn btn-sm btn-danger csbtn">-</button>
-                    <input type="text" readonly="" :value="cart.product_qty" style="width:25px">
-                    <button class="btn btn-sm btn-success csbtn">+</button>
-                    </td>
-                  <td>{{cart.product_price}}</td>
-                  <td>{{cart.sub_total}}</td>
-                  <td><a @click="removeItem(cart.id)" class="btn btn-sm btn-danger">X</a></td>
+                <tr>
+                  <td><a href="#">Name</a></td>
+                  <td>Qty</td>
+                  <td>Unit</td>
+                  <td>Total</td>
+                  <td><a href="#" class="btn btn-sm btn-danger">X</a></td>
                 </tr>
               </tbody>
             </table>
@@ -143,16 +138,15 @@
                           :key="product.id"
                         >
                           <div class="card ecommerce-card">
-                            <button class="btn btn-sm cbtn" @click.prevent="AddToCart(product.id)">
                             <div class="item-img text-center">
-                              
+                              <a href="app-ecommerce-details.html">
                                 <img
                                   class="img-fluid card-img-top"
                                   :src="product.image"
                                   alt="img-placeholder"
-                              />
+                              /></a>
                             </div>
-                            <div class="card-body cardbody">
+                            <div class="card-body">
                               <div class="item-wrapper">
                                 <div>
                                   <h6 class="item-price">
@@ -161,7 +155,11 @@
                                 </div>
                               </div>
                               <h6 class="item-name">
-                                {{ product.product_name }}
+                                <a
+                                  class="text-body"
+                                  href="app-ecommerce-details.html"
+                                  >{{ product.product_name }}</a
+                                >
                               </h6>
                               <span
                                 class="badge badge-success"
@@ -172,7 +170,6 @@
                                 >Stock Out</span
                               >
                             </div>
-                            </button>
                             <div class="item-options text-center"></div>
                           </div>
                         </div>
@@ -204,15 +201,15 @@
                           :key="getproduct.id"
                         >
                           <div class="card ecommerce-card">
-                            <button class="btn btn-sm cbtn" @click.prevent="AddToCart(product.id)">
                             <div class="item-img text-center">
+                              <a href="app-ecommerce-details.html">
                                 <img
                                   class="img-fluid card-img-top"
                                   :src="getproduct.image"
                                   alt="img-placeholder"
-                              />
+                              /></a>
                             </div>
-                            <div class="card-body cardbody">
+                            <div class="card-body">
                               <div class="item-wrapper">
                                 <div>
                                   <h6 class="item-price">
@@ -221,7 +218,11 @@
                                 </div>
                               </div>
                               <h6 class="item-name">
-                                {{ getproduct.product_name }}
+                                <a
+                                  class="text-body"
+                                  href="app-ecommerce-details.html"
+                                  >{{ getproduct.product_name }}</a
+                                >
                               </h6>
                               <span
                                 class="badge badge-success"
@@ -232,7 +233,6 @@
                                 >Stock Out</span
                               >
                             </div>
-                            </button>
                             <div class="item-options text-center"></div>
                           </div>
                         </div>
@@ -260,10 +260,6 @@ export default {
     this.allProduct();
     this.allCategory();
     this.allCustomer();
-    this.cartProduct();
-    Reload.$on('AfterAdd',()=>{
-      this.cartProduct();
-    })
   },
   data() {
     return {
@@ -272,8 +268,7 @@ export default {
       getproducts: [],
       searchTerm: "",
       customers: "",
-      errors:"",
-      carts:[]
+      errors:""
     };
   },
 
@@ -292,41 +287,6 @@ export default {
   },
 
   methods: {
-    // cart method start
-    AddToCart(id){
-      axios
-        .get("/api/addToCart/" + id)
-        .then(() => {
-          Reload.$emit('AfterAdd');
-          Notification.cart_success();
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    }, 
-
-    removeItem(id){
-      axios
-        .get("/api/removeItem/" + id)
-        .then(() => {
-          Reload.$emit('AfterAdd');
-          Notification.item_remove();
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    },
-
-    cartProduct() {
-      axios
-        .get("/api/cart/product/")
-        .then(({ data }) => (this.carts = data))
-        .catch((err) => {
-          console.error(err);
-        });
-    },
-
-    // cart method end
     allProduct() {
       axios
         .get("/api/product/")
@@ -372,19 +332,6 @@ export default {
   width: 40px;
 }
 .item-img img {
-  height: 150px;
-}
-.cardbody{
-  background-color: #043257;
-}
-.cbtn{
-  padding: 5px;
-}
-.table th, .table td{
-      padding: 0.75rem !important;
-}
-.csbtn{
-  padding: 0.7rem 0.7rem !important;
-  width: 25px;
+  height: 200px;
 }
 </style>
