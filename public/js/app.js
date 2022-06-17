@@ -7860,6 +7860,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       console.error(err);
     });
   },
+  increment: function increment(id) {
+    axios.get("/api/increment/" + id).then(function () {
+      Reload.$emit('AfterAdd');
+      Notification.success();
+    })["catch"](function (err) {
+      console.error(err);
+    });
+  },
+  decrement: function decrement(id) {
+    axios.get("/api/decrement/" + id).then(function () {
+      Reload.$emit('AfterAdd');
+      Notification.success();
+    })["catch"](function (err) {
+      console.error(err);
+    });
+  },
   cartProduct: function cartProduct() {
     var _this4 = this;
 
@@ -46676,7 +46692,14 @@ var render = function () {
                           _vm._v(" "),
                           _c(
                             "button",
-                            { staticClass: "btn btn-sm btn-danger csbtn" },
+                            {
+                              staticClass: "btn btn-sm btn-danger csbtn",
+                              on: {
+                                click: function ($event) {
+                                  return _vm.decrement(cart.id)
+                                },
+                              },
+                            },
                             [_vm._v("-")]
                           ),
                           _vm._v(" "),
@@ -46688,7 +46711,14 @@ var render = function () {
                           _vm._v(" "),
                           _c(
                             "button",
-                            { staticClass: "btn btn-sm btn-success csbtn" },
+                            {
+                              staticClass: "btn btn-sm btn-success csbtn",
+                              on: {
+                                click: function ($event) {
+                                  return _vm.increment(cart.id)
+                                },
+                              },
+                            },
                             [_vm._v("+")]
                           ),
                         ]),

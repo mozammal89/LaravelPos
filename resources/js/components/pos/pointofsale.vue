@@ -25,9 +25,9 @@
                   <td>{{cart.product_name}}</td>
                   <td>
                     <span></span>
-                    <button class="btn btn-sm btn-danger csbtn">-</button>
+                    <button @click="decrement(cart.id)" class="btn btn-sm btn-danger csbtn">-</button>
                     <input type="text" readonly="" :value="cart.product_qty" style="width:25px">
-                    <button class="btn btn-sm btn-success csbtn">+</button>
+                    <button @click="increment(cart.id)" class="btn btn-sm btn-success csbtn">+</button>
                     </td>
                   <td>{{cart.product_price}}</td>
                   <td>{{cart.sub_total}}</td>
@@ -311,6 +311,29 @@ export default {
         .then(() => {
           Reload.$emit('AfterAdd');
           Notification.item_remove();
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    },
+
+    increment(id){
+      axios
+        .get("/api/increment/" + id)
+        .then(() => {
+          Reload.$emit('AfterAdd');
+          Notification.success();
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    },
+    decrement(id){
+      axios
+        .get("/api/decrement/" + id)
+        .then(() => {
+          Reload.$emit('AfterAdd');
+          Notification.success();
         })
         .catch((err) => {
           console.error(err);

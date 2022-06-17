@@ -77,3 +77,5 @@ Route::get('/getting/product/{id}',[PosController::class,'getProduct'])->name('g
 Route::get('/addToCart/{id}',[CartController::class,'addToCart'])->name('add.to.cart');
 Route::get('/cart/product/',[CartController::class,'cartProduct'])->name('cart.product');
 Route::get('/removeItem/{id}',[CartController::class,'removeItem'])->name('remove.item');
+Route::get('/increment/{id}',[CartController::class,'incrementItem'])->name('increment.item');
+Route::get('/decrement/{id}',[CartController::class,'decrementItem'])->name('decrement.item');
