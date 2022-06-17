@@ -54,7 +54,10 @@
         <form>
           <label>Customer name</label>
           <select class="form-control" v-model="customer_id">
-            <option v-for="customer in customers"">{{customer.name}}</option>
+            <option value="">Sohel</option>
+            <option value="">Moriom</option>
+            <option value="">Mozamml</option>
+            <option value="">Ador</option>
           </select>
 
           <label for="pay">Pay</label>
@@ -259,7 +262,6 @@ export default {
   created() {
     this.allProduct();
     this.allCategory();
-    this.allCustomer();
   },
   data() {
     return {
@@ -267,8 +269,6 @@ export default {
       categories: "",
       getproducts: [],
       searchTerm: "",
-      customers: "",
-      errors:""
     };
   },
 
@@ -302,15 +302,6 @@ export default {
         .then(({ data }) => (this.categories = data))
         .catch((err) => {
           console.error(err);
-        });
-    },
-
-    allCustomer() {
-      axios
-        .get("/api/customer/")
-        .then(({ data }) => (this.customers = data))
-        .catch((err) => {
-          console.error(console.log(err));
         });
     },
 
