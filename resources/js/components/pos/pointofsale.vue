@@ -25,13 +25,14 @@
                   <td>{{cart.product_name}}</td>
                   <td>
                     <span></span>
-                    <button @click="decrement(cart.id)" class="btn btn-sm btn-danger csbtn">-</button>
+                    <button @click="decrement(cart.id)" class="btn btn-sm btn-danger csbtn" v-if="cart.product_qty >=2">-</button>
+                    <button @click="decrement(cart.id)" class="btn btn-sm btn-danger csbtn" v-else=" " disabled="">-</button>
                     <input type="text" readonly="" :value="cart.product_qty" style="width:25px">
                     <button @click="increment(cart.id)" class="btn btn-sm btn-success csbtn">+</button>
                     </td>
                   <td>{{cart.product_price}}</td>
                   <td>{{cart.sub_total}}</td>
-                  <td><a @click="removeItem(cart.id)" class="btn btn-sm btn-danger">X</a></td>
+                  <td><a @click="removeItem(cart.id)" class="btn btn-sm btn-danger" style="color:white">X</a></td>
                 </tr>
               </tbody>
             </table>
@@ -204,7 +205,7 @@
                           :key="getproduct.id"
                         >
                           <div class="card ecommerce-card">
-                            <button class="btn btn-sm cbtn" @click.prevent="AddToCart(product.id)">
+                            <button class="btn btn-sm cbtn" @click.prevent="AddToCart(getproduct.id)">
                             <div class="item-img text-center">
                                 <img
                                   class="img-fluid card-img-top"

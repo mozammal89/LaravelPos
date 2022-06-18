@@ -7799,6 +7799,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_created$created$data = {
   created: function created() {
     if (!User.loggedIn()) {
@@ -46690,18 +46691,32 @@ var render = function () {
                         _c("td", [
                           _c("span"),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-sm btn-danger csbtn",
-                              on: {
-                                click: function ($event) {
-                                  return _vm.decrement(cart.id)
+                          cart.product_qty >= 2
+                            ? _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-sm btn-danger csbtn",
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.decrement(cart.id)
+                                    },
+                                  },
                                 },
-                              },
-                            },
-                            [_vm._v("-")]
-                          ),
+                                [_vm._v("-")]
+                              )
+                            : _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-sm btn-danger csbtn",
+                                  attrs: { disabled: "" },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.decrement(cart.id)
+                                    },
+                                  },
+                                },
+                                [_vm._v("-")]
+                              ),
                           _vm._v(" "),
                           _c("input", {
                             staticStyle: { width: "25px" },
@@ -46732,6 +46747,7 @@ var render = function () {
                             "a",
                             {
                               staticClass: "btn btn-sm btn-danger",
+                              staticStyle: { color: "white" },
                               on: {
                                 click: function ($event) {
                                   return _vm.removeItem(cart.id)
@@ -47191,7 +47207,7 @@ var render = function () {
                                             click: function ($event) {
                                               $event.preventDefault()
                                               return _vm.AddToCart(
-                                                _vm.product.id
+                                                getproduct.id
                                               )
                                             },
                                           },
