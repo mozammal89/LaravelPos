@@ -164,4 +164,11 @@ class ExtraController extends Controller
             DB::table('extras')->where('id', $id)->delete();
         }
     }
+
+
+    public function getVat(Request $request)
+    {
+        $vat = DB::table('extras')->first();
+        return response()->json($vat);
+    }
 }

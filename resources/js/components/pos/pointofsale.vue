@@ -41,19 +41,19 @@
         <div class="card-footer">
           <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-center">Total Quantity:
-              <strong>50</strong>
+              <strong>{{qty}}</strong>
             </li>
 
             <li class="list-group-item d-flex justify-content-between align-items-center">Sub Total:
-              <strong>BDT 120.00</strong>
+              <strong>BDT {{subTotal}}</strong>
             </li>
 
-            <li class="list-group-item d-flex justify-content-between align-items-center">Vat:
-              <strong>BDT 00.00</strong>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Vat:(calculation {{extras.vat}} %)
+              <strong>BDT {{subTotal*extras.vat/100}}</strong>
             </li>
             
             <li class="list-group-item d-flex justify-content-between align-items-center">Total:
-              <strong>BDT 120.00</strong>
+              <strong>BDT {{subTotal*extras.vat/100 + subTotal}}</strong>
             </li>
           </ul>
         <br>
@@ -262,6 +262,7 @@ export default {
     this.allCategory();
     this.allCustomer();
     this.cartProduct();
+    this.allExtra();
     Reload.$on('AfterAdd',()=>{
       this.cartProduct();
     })
@@ -274,7 +275,8 @@ export default {
       searchTerm: "",
       customers: "",
       errors:"",
-      carts:[]
+      carts:[],
+      extras:"",
     };
   },
 
@@ -289,6 +291,22 @@ export default {
       return this.getproducts.filter((getproduct) => {
         return getproduct.product_name.match(this.searchTerm);
       });
+    },
+    //calculation cart qty
+    qty(){
+      let sum = 0;
+      for(let i = 0; i< this.carts.length; i++){
+          sum += (parseFloat(this.carts[i].product_qty));
+      }
+      return sum;
+    },
+
+    subTotal(){
+      let sum = 0;
+      for(let i = 0; i< this.carts.length; i++){
+          sum += (parseFloat(this.carts[i].sub_total));
+      }
+      return sum;
     },
   },
 
@@ -348,6 +366,16 @@ export default {
         .catch((err) => {
           console.error(err);
         });
+    },
+
+    //get vat
+
+    allExtra(){
+      axios.get('/api/vats/')
+      .then(({data}) => (this.extras = data))
+      .catch(err => {
+        console.error(err); 
+      })
     },
 
     // cart method end

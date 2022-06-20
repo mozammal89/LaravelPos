@@ -83,3 +83,5 @@ Route::get('/decrement/{id}',[CartController::class,'decrementItem'])->name('dec
 
 //Extra/vat Route
 Route::apiResource('/extra',ExtraController::class);
+
+Route::get('/vats',[ExtraController::class,'getVat'])->name('get.vat');

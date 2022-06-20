@@ -8332,6 +8332,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   this.allCategory();
   this.allCustomer();
   this.cartProduct();
+  this.allExtra();
   Reload.$on('AfterAdd', function () {
     _this.cartProduct();
   });
@@ -8343,7 +8344,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     searchTerm: "",
     customers: "",
     errors: "",
-    carts: []
+    carts: [],
+    extras: ""
   };
 }), _defineProperty(_created$created$data, "computed", {
   filtersearch: function filtersearch() {
@@ -8359,6 +8361,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return this.getproducts.filter(function (getproduct) {
       return getproduct.product_name.match(_this3.searchTerm);
     });
+  },
+  //calculation cart qty
+  qty: function qty() {
+    var sum = 0;
+
+    for (var i = 0; i < this.carts.length; i++) {
+      sum += parseFloat(this.carts[i].product_qty);
+    }
+
+    return sum;
+  },
+  subTotal: function subTotal() {
+    var sum = 0;
+
+    for (var i = 0; i < this.carts.length; i++) {
+      sum += parseFloat(this.carts[i].sub_total);
+    }
+
+    return sum;
   }
 }), _defineProperty(_created$created$data, "methods", {
   // cart method start
@@ -8404,43 +8425,54 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       console.error(err);
     });
   },
-  // cart method end
-  allProduct: function allProduct() {
+  //get vat
+  allExtra: function allExtra() {
     var _this5 = this;
 
-    axios.get("/api/product/").then(function (_ref2) {
+    axios.get('/api/vats/').then(function (_ref2) {
       var data = _ref2.data;
-      return _this5.products = data;
+      return _this5.extras = data;
+    })["catch"](function (err) {
+      console.error(err);
+    });
+  },
+  // cart method end
+  allProduct: function allProduct() {
+    var _this6 = this;
+
+    axios.get("/api/product/").then(function (_ref3) {
+      var data = _ref3.data;
+      return _this6.products = data;
     })["catch"](function (err) {
       console.error(err);
     });
   },
   allCategory: function allCategory() {
-    var _this6 = this;
+    var _this7 = this;
 
-    axios.get("/api/category/").then(function (_ref3) {
-      var data = _ref3.data;
-      return _this6.categories = data;
+    axios.get("/api/category/").then(function (_ref4) {
+      var data = _ref4.data;
+      return _this7.categories = data;
     })["catch"](function (err) {
       console.error(err);
     });
   },
   allCustomer: function allCustomer() {
-    var _this7 = this;
+    var _this8 = this;
 
-    axios.get("/api/customer/").then(function (_ref4) {
-      var data = _ref4.data;
-      return _this7.customers = data;
+    axios.get("/api/customer/").then(function (_ref5) {
+      var data = _ref5.data;
+      return _this8.customers = data;
     })["catch"](function (err) {
       console.error(console.log(err));
     });
   },
   subProduct: function subProduct(id) {
-    var _this8 = this;
+    var _this9 = this;
 
-    axios.get("/api/getting/product/" + id).then(function (_ref5) {
-      var data = _ref5.data;
-      return _this8.getproducts = data;
+    axios.get("/api/getting/product/" + id).then(function (_ref6) {
+      var data = _ref6.data;
+      return _this9.getproducts = data;
     })["catch"](function (err) {
       console.error(err);
     });
@@ -48349,7 +48381,70 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-footer" }, [
-              _vm._m(2),
+              _c("ul", { staticClass: "list-group" }, [
+                _c(
+                  "li",
+                  {
+                    staticClass:
+                      "list-group-item d-flex justify-content-between align-items-center",
+                  },
+                  [
+                    _vm._v("Total Quantity:\n            "),
+                    _c("strong", [_vm._v(_vm._s(_vm.qty))]),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    staticClass:
+                      "list-group-item d-flex justify-content-between align-items-center",
+                  },
+                  [
+                    _vm._v("Sub Total:\n            "),
+                    _c("strong", [_vm._v("BDT " + _vm._s(_vm.subTotal))]),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    staticClass:
+                      "list-group-item d-flex justify-content-between align-items-center",
+                  },
+                  [
+                    _vm._v(
+                      "Vat:(calculation " +
+                        _vm._s(_vm.extras.vat) +
+                        " %)\n            "
+                    ),
+                    _c("strong", [
+                      _vm._v(
+                        "BDT " + _vm._s((_vm.subTotal * _vm.extras.vat) / 100)
+                      ),
+                    ]),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    staticClass:
+                      "list-group-item d-flex justify-content-between align-items-center",
+                  },
+                  [
+                    _vm._v("Total:\n            "),
+                    _c("strong", [
+                      _vm._v(
+                        "BDT " +
+                          _vm._s(
+                            (_vm.subTotal * _vm.extras.vat) / 100 + _vm.subTotal
+                          )
+                      ),
+                    ]),
+                  ]
+                ),
+              ]),
               _vm._v(" "),
               _c("br"),
               _vm._v(" "),
@@ -48497,13 +48592,13 @@ var render = function () {
         _vm._v(" "),
         _c("div", { staticClass: "col-lg-7 col-12" }, [
           _c("div", { staticClass: "card" }, [
-            _vm._m(3),
+            _vm._m(2),
             _vm._v(" "),
             _c(
               "ul",
               { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
               [
-                _vm._m(4),
+                _vm._m(3),
                 _vm._v(" "),
                 _vm._l(_vm.categories, function (category) {
                   return _c(
@@ -48944,51 +49039,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Action")]),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "list-group" }, [
-      _c(
-        "li",
-        {
-          staticClass:
-            "list-group-item d-flex justify-content-between align-items-center",
-        },
-        [_vm._v("Total Quantity:\n            "), _c("strong", [_vm._v("50")])]
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        {
-          staticClass:
-            "list-group-item d-flex justify-content-between align-items-center",
-        },
-        [
-          _vm._v("Sub Total:\n            "),
-          _c("strong", [_vm._v("BDT 120.00")]),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        {
-          staticClass:
-            "list-group-item d-flex justify-content-between align-items-center",
-        },
-        [_vm._v("Vat:\n            "), _c("strong", [_vm._v("BDT 00.00")])]
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        {
-          staticClass:
-            "list-group-item d-flex justify-content-between align-items-center",
-        },
-        [_vm._v("Total:\n            "), _c("strong", [_vm._v("BDT 120.00")])]
-      ),
     ])
   },
   function () {
