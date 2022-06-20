@@ -52,6 +52,11 @@ let editCustomer = require('./components/customer/edit.vue').default;
 //pos component
 let pos = require('./components/pos/pointofsale.vue').default;
 
+//extra vat component
+let allExtra = require('./components/extra/index.vue').default;
+let storeExtra = require('./components/extra/create.vue').default;
+let editExtra = require('./components/extra/edit.vue').default;
+
 
 export const routes = [
   //auth rout start
@@ -108,4 +113,11 @@ export const routes = [
     //pos router
     { path: '/pos', component: pos, name: 'pos' },
 
+    //extra vat route
+    { path: '/store-extra', component: storeExtra, name: 'store-extra' },
+    { path: '/extra-list', component: allExtra, name: 'extra-list' },
+    { path: '/edit-extra/:id', component: editExtra, name: 'edit-extra' },
+
   ]
+  
+

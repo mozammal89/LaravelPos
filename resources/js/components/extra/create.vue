@@ -1,0 +1,163 @@
+<template>
+  <div>
+    <section id="basic-input">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Add Extra/Vat</h4>
+              <router-link class="btn btn-warning btn-sm" to="/customer-list"
+                >Extra/vat List</router-link
+              >
+            </div>
+            <div class="card-content">
+              <div class="card-body">
+                <form class="customer" @submit.prevent="customerInsert" enctype="multipart/form-data">
+                  <div class="row">
+                    <div class="col-xl-4 col-md-6 col-12 mb-1">
+                      <fieldset class="form-group">
+                        <label for="basicInput">Vat</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="basicInput"
+                          placeholder="Enter Vat"
+                          v-model="form.vat"
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12 mb-1">
+                      <fieldset class="form-group">
+                        <label for="basicInput">Email</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="basicInput"
+                          placeholder="Enter email"
+                          v-model="form.email"
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12 mb-1">
+                      <fieldset class="form-group">
+                        <label for="basicInput">Phone</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="basicInput"
+                          placeholder="Enter Phone"
+                          v-model="form.phone"
+                        />
+                      </fieldset>
+                    </div>
+                    
+                    <div class="col-xl-6 col-md-6 col-12 mb-1">
+                      <fieldset class="form-group">
+                        <label for="basicInput">Address</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="basicInput"
+                          placeholder="Enter Address"
+                          v-model="form.address"
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-12 mb-1">
+                      <fieldset class="form-group">
+                        <label for="basicInputFile">Logo</label>
+                        <div class="custom-file">
+                          <input
+                            type="file"
+                            class="custom-file-input"
+                            id="inputGroupFile01"
+                            @change="onFileSelect"
+                          />
+                          <label
+                            class="custom-file-label"
+                            for="inputGroupFile01"
+                            >Choose file</label
+                          >
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="col-xl-1 col-md-6 col-12 mb-1">
+                      <fieldset class="form-group">
+                        <img
+                          :src="form.logo"
+                          style="height: 50px; width: 50px"
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-12 mb-1">
+                      <button
+                        type="submit"
+                        class="btn btn-primary float-right btn-inline mb-50"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script type="text/javascript">
+export default {
+  created() {
+    if (!User.loggedIn()) {
+      this.$router.push({ name: "/" });
+    }
+  },
+
+  data() {
+    return {
+      form: {
+          vat : null,
+          email : null,
+          phone : null,
+          address : null,
+          logo : null
+      },
+      errors: {},
+    };
+  },
+  methods: {
+    onFileSelect(event){
+      // console.log(event);
+      let file = event.target.files[0];
+      if (file.size > 1048770) {
+        Notification.image_validation();
+      }else{
+        // console.log(event);
+        let reader = new FileReader();
+        reader.onload = event =>{
+          this.form.logo = event.target.result
+        //   console.log(event.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+      
+    },
+    customerInsert(){
+      axios.post('api/extra',this.form)
+      .then(res => {
+        // console.log(res);
+        this.$router.push({ name: 'extra-list'})
+        Notification.success()
+      })
+      .catch(error => this.errors= error.response.data.errors)
+    }
+  },
+};
+
+</script>
+
+<style type="text/css">
+</style>

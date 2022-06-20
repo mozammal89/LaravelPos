@@ -15,6 +15,12 @@ class CreateExtrasTable extends Migration
     {
         Schema::create('extras', function (Blueprint $table) {
             $table->id();
+            $table->integer('vat')->nullable(0);
+            $table->string('logo');
+            $table->string('favicon')->nullable();
+            $table->string('phone');
+            $table->string('email');
+            $table->string('address');
             $table->timestamps();
         });
     }

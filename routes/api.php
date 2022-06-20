@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Api\EmployeeController;
 use App\Http\Controllers\Api\ExpanseController;
+use App\Http\Controllers\Api\ExtraController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\SalaryController;
 use App\Http\Controllers\Api\SupplierController;
@@ -79,3 +80,6 @@ Route::get('/cart/product/',[CartController::class,'cartProduct'])->name('cart.p
 Route::get('/removeItem/{id}',[CartController::class,'removeItem'])->name('remove.item');
 Route::get('/increment/{id}',[CartController::class,'incrementItem'])->name('increment.item');
 Route::get('/decrement/{id}',[CartController::class,'decrementItem'])->name('decrement.item');
+
+//Extra/vat Route
+Route::apiResource('/extra',ExtraController::class);
