@@ -140,6 +140,20 @@
                 </ul>
             </li>
 
+            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title"
+                data-i18n="Ecommerce">Order</span></a>
+                <ul class="menu-content">
+                    <li>
+                        <router-link to="/today-order"><i class="feather icon-plus"></i><span class="menu-item"
+                                data-i18n="Shop">Today Order</span></router-link>
+                    </li>
+                    <li>
+                        <router-link to="/search-order"><i class="feather icon-circle"></i><span class="menu-item"
+                                data-i18n="Shop">Search Order</span></router-link>
+                    </li>
+                </ul>
+            </li>
+
 
             {{-- <li class=" nav-item"><a href="#"><i class="feather icon-file-text"></i><span class="menu-title"
                         data-i18n="Ecommerce">Report </span></a>

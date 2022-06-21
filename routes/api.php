@@ -80,6 +80,9 @@ Route::get('/cart/product/',[CartController::class,'cartProduct'])->name('cart.p
 Route::get('/removeItem/{id}',[CartController::class,'removeItem'])->name('remove.item');
 Route::get('/increment/{id}',[CartController::class,'incrementItem'])->name('increment.item');
 Route::get('/decrement/{id}',[CartController::class,'decrementItem'])->name('decrement.item');
+// order done 
+Route::post('/order-done',[PosController::class,'orderDone'])->name('order.done');
+
 
 //Extra/vat Route
 Route::apiResource('/extra',ExtraController::class);

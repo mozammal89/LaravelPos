@@ -57,28 +57,28 @@
             </li>
           </ul>
         <br>
-        <form>
+        <form @submit.prevent="orderDone">
           <label>Customer name</label>
           <select class="form-control" v-model="customer_id">
-            <option v-for="customer in customers"">{{customer.name}}</option>
+            <option :value="customer.id" v-for="customer in customers"">{{customer.name}}</option>
           </select>
 
           <label for="pay">Pay</label>
           <input type="text" class="form-control" required="" v-model="pay">
 
           <label for="pay">Due</label>
-          <input type="text" class="form-control" required="" v-model="due">
+          <input type="text" class="form-control" required=""  v-model="due">
 
           <label>Pay By</label>
-          <select class="form-control" v-model="customer_id">
-            <option value="">Cash</option>
-            <option value="">Check</option>
-            <option value="">Card</option>
-            <option value="">MFS</option>
-            <option value="">Gift Card</option>
+          <select class="form-control" v-model="payby">
+            <option value="Cash">Cash</option>
+            <option value="Check">Check</option>
+            <option value="Card">Card</option>
+            <option value="MFS">MFS</option>
+            <option value="Gift Card">Gift Card</option>
           </select>
           <br>
-          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="submit" class="btn btn-success col-12">Submit</button>
         </form>
 
         </div>
@@ -269,6 +269,14 @@ export default {
   },
   data() {
     return {
+      customer_id:'',
+      pay:'',
+      due:'',
+      payby:'',
+      vat:'',
+      total:'',
+      totalvat:'',
+
       products: [],
       categories: "",
       getproducts: [],
@@ -308,6 +316,9 @@ export default {
       }
       return sum;
     },
+    
+
+    
   },
 
   methods: {
@@ -377,6 +388,32 @@ export default {
         console.error(err); 
       })
     },
+
+    //order complete
+    orderDone(){
+      let vat = this.extras.vat;
+      let totalvat = this.subTotal*this.extras.vat/100;
+      let total = this.subTotal*this.extras.vat/100 + this.subTotal;
+
+      var data = { qty:this.qty, subtotal:this.subTotal, customer_id:this.customer_id,
+      payby:this.payby, pay:this.pay, due:this.due, vat:vat, 
+      totalvat:totalvat, total:total }
+
+      axios.post('api/order-done',data)
+      .then(res => {
+        // console.log(res);
+        Notification.success()
+        this.$router.push({ name: 'home'})
+      })
+    },
+
+    payOnChange(event) {
+            let paybill = event.target.value;
+            let payableamount = this.subTotal*this.extras.vat/100 + this.subTotal;
+            let tdue = payableamount-paybill;
+            
+        },
+
 
     // cart method end
     allProduct() {
