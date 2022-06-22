@@ -57,6 +57,9 @@ let allExtra = require('./components/extra/index.vue').default;
 let storeExtra = require('./components/extra/create.vue').default;
 let editExtra = require('./components/extra/edit.vue').default;
 
+//order component
+let todayOrder = require('./components/order/today.vue').default;
+
 
 export const routes = [
   //auth rout start
@@ -117,6 +120,9 @@ export const routes = [
     { path: '/store-extra', component: storeExtra, name: 'store-extra' },
     { path: '/extra-list', component: allExtra, name: 'extra-list' },
     { path: '/edit-extra/:id', component: editExtra, name: 'edit-extra' },
+
+    //order route
+    { path: '/today-order', component: todayOrder, name:'today-order' },
 
   ]
   
