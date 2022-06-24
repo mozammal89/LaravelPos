@@ -7,7 +7,7 @@
             <div class="card-header">
               <h4 class="card-title">Today Order</h4>
               <router-link class="btn btn-warning btn-sm" to="/pos"
-                >POS</router-link
+                >Pos</router-link
               >
             </div>
             <div class="card-content">
@@ -23,21 +23,24 @@
                             <thead>
                               <tr>
                                 <th>Name</th>
-                                <th>Photo</th>
-                                <th>Phone</th>
-                                <th>Email</th>
+                                <th>Invoice</th>
+                                <th>Total Amount</th>
+                                <th>Pay</th>
+                                <th>Due</th>
+                                <th>Pay By</th>
                                 <th>Action</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr v-for="extra in filtersearch" :key="extra.id">
-                                <td>{{extra.vat}}</td>
-                                <td><img :src="extra.logo" class="emp_img"></td>
-                                <td>{{extra.phone}}</td>
-                                <td>{{extra.email}}</td>
+                                <td>{{extra.name}}</td>
+                                <td>{{extra.id}}</td>
+                                <td>{{extra.total}}</td>
+                                <td>{{extra.pay}}</td>
+                                <td>{{extra.due}}</td>
+                                <td>{{extra.payby}}</td>
                                 <td> 
-                                  <router-link :to="{name: 'edit-extra', params:{id:extra.id}}" class="btn btn-warning btn-sm">Edit</router-link> 
-                                  <a @click="deleteExtra(extra.id)" class="btn btn-danger btn-sm">Delete</a> 
+                                  <router-link :to="{name: 'view-order', params:{id:extra.id}}" class="btn btn-warning btn-sm">View</router-link> 
                                 </td>
                               </tr>                              
                             </tbody>
@@ -66,64 +69,31 @@ export default {
       this.$router.push({ name: "/" });
     }
   },
-
   data(){
     return{
-      extras:[],
+      orders:[],
       searchTerm:''
     }
   },
-
   computed:{
     filtersearch(){
-      return this.extras.filter(extra => {
-        return extra.phone.match(this.searchTerm)
+      return this.orders.filter(order => {
+        return order.name.match(this.searchTerm)
       })
     }
   },
 
   methods: {
-    allExtra(){
-      axios.get('/api/extra/')
-      .then(({data}) => (this.extras = data))
+    todayOrder(){
+      axios.get('/api/today-order/')
+      .then(({data}) => (this.orders = data))
       .catch(err => {
         console.error(err); 
       })
-    },
-    deleteExtra(id){ 
-      // console.log(id);
-      Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-      if (result.value) {
-        axios.delete('/api/extra/'+id)
-        .then(()=>{
-          this.extras = this.extras.filter(extra => {
-            console.log(extra)
-            return extra.id != id
-          })
-        })
-        .catch(()=>{
-          // console.log('no');
-          this.$router.push({name: 'extra-list'})
-        })
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
-      }
-    })
     }
   },
   created(){
-    this.allExtra();
+    this.todayOrder();
   }
 };
 </script>

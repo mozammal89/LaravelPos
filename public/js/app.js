@@ -8124,6 +8124,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
   created: function created() {
     if (!User.loggedIn()) {
@@ -8134,7 +8137,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   data: function data() {
     return {
-      extras: [],
+      orders: [],
       searchTerm: ''
     };
   },
@@ -8142,54 +8145,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     filtersearch: function filtersearch() {
       var _this = this;
 
-      return this.extras.filter(function (extra) {
-        return extra.phone.match(_this.searchTerm);
+      return this.orders.filter(function (order) {
+        return order.name.match(_this.searchTerm);
       });
     }
   },
   methods: {
-    allExtra: function allExtra() {
+    todayOrder: function todayOrder() {
       var _this2 = this;
 
-      axios.get('/api/extra/').then(function (_ref) {
+      axios.get('/api/today-order/').then(function (_ref) {
         var data = _ref.data;
-        return _this2.extras = data;
+        return _this2.orders = data;
       })["catch"](function (err) {
         console.error(err);
-      });
-    },
-    deleteExtra: function deleteExtra(id) {
-      var _this3 = this;
-
-      // console.log(id);
-      Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then(function (result) {
-        if (result.value) {
-          axios["delete"]('/api/extra/' + id).then(function () {
-            _this3.extras = _this3.extras.filter(function (extra) {
-              console.log(extra);
-              return extra.id != id;
-            });
-          })["catch"](function () {
-            // console.log('no');
-            _this3.$router.push({
-              name: 'extra-list'
-            });
-          });
-          Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
-        }
       });
     }
   }
 }, "created", function created() {
-  this.allExtra();
+  this.todayOrder();
 }));
 
 /***/ }),
@@ -48636,7 +48610,7 @@ var render = function () {
                     staticClass: "btn btn-warning btn-sm",
                     attrs: { to: "/pos" },
                   },
-                  [_vm._v("POS")]
+                  [_vm._v("Pos")]
                 ),
               ],
               1
@@ -48679,18 +48653,17 @@ var render = function () {
                               "tbody",
                               _vm._l(_vm.filtersearch, function (extra) {
                                 return _c("tr", { key: extra.id }, [
-                                  _c("td", [_vm._v(_vm._s(extra.vat))]),
+                                  _c("td", [_vm._v(_vm._s(extra.name))]),
                                   _vm._v(" "),
-                                  _c("td", [
-                                    _c("img", {
-                                      staticClass: "emp_img",
-                                      attrs: { src: extra.logo },
-                                    }),
-                                  ]),
+                                  _c("td", [_vm._v(_vm._s(extra.id))]),
                                   _vm._v(" "),
-                                  _c("td", [_vm._v(_vm._s(extra.phone))]),
+                                  _c("td", [_vm._v(_vm._s(extra.total))]),
                                   _vm._v(" "),
-                                  _c("td", [_vm._v(_vm._s(extra.email))]),
+                                  _c("td", [_vm._v(_vm._s(extra.pay))]),
+                                  _vm._v(" "),
+                                  _c("td", [_vm._v(_vm._s(extra.due))]),
+                                  _vm._v(" "),
+                                  _c("td", [_vm._v(_vm._s(extra.payby))]),
                                   _vm._v(" "),
                                   _c(
                                     "td",
@@ -48701,25 +48674,12 @@ var render = function () {
                                           staticClass: "btn btn-warning btn-sm",
                                           attrs: {
                                             to: {
-                                              name: "edit-extra",
+                                              name: "view-order",
                                               params: { id: extra.id },
                                             },
                                           },
                                         },
-                                        [_vm._v("Edit")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass: "btn btn-danger btn-sm",
-                                          on: {
-                                            click: function ($event) {
-                                              return _vm.deleteExtra(extra.id)
-                                            },
-                                          },
-                                        },
-                                        [_vm._v("Delete")]
+                                        [_vm._v("View")]
                                       ),
                                     ],
                                     1
@@ -48753,11 +48713,15 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", [_vm._v("Name")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Photo")]),
+        _c("th", [_vm._v("Invoice")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Phone")]),
+        _c("th", [_vm._v("Total Amount")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Email")]),
+        _c("th", [_vm._v("Pay")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Due")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Pay By")]),
         _vm._v(" "),
         _c("th", [_vm._v("Action")]),
       ]),

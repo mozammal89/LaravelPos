@@ -9,6 +9,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Api\EmployeeController;
 use App\Http\Controllers\Api\ExpanseController;
 use App\Http\Controllers\Api\ExtraController;
+use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\SalaryController;
 use App\Http\Controllers\Api\SupplierController;
@@ -82,7 +83,7 @@ Route::get('/increment/{id}',[CartController::class,'incrementItem'])->name('inc
 Route::get('/decrement/{id}',[CartController::class,'decrementItem'])->name('decrement.item');
 // order done 
 Route::post('/order-done',[PosController::class,'orderDone'])->name('order.done');
-
+Route::get('/today-order',[OrderController::class,'todayOrder'])->name('today.order');
 
 //Extra/vat Route
 Route::apiResource('/extra',ExtraController::class);
