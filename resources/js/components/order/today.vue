@@ -40,7 +40,7 @@
                                 <td>{{extra.due}}</td>
                                 <td>{{extra.payby}}</td>
                                 <td> 
-                                  <router-link :to="{name: 'view-order', params:{id:extra.id}}" class="btn btn-warning btn-sm">View</router-link> 
+                                  <router-link :to="{name: 'order-details', params:{id:extra.id}}" class="btn btn-warning btn-sm">View</router-link> 
                                 </td>
                               </tr>                              
                             </tbody>

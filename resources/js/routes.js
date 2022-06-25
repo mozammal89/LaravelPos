@@ -59,6 +59,7 @@ let editExtra = require('./components/extra/edit.vue').default;
 
 //order component
 let todayOrder = require('./components/order/today.vue').default;
+let orderDetails = require('./components/order/details.vue').default;
 
 
 export const routes = [
@@ -123,6 +124,7 @@ export const routes = [
 
     //order route
     { path: '/today-order', component: todayOrder, name:'today-order' },
+    { path: '/order-details/:id', component: orderDetails, name:'order-details' },
 
   ]
   
