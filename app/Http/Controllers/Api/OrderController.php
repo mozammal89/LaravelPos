@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -43,5 +44,23 @@ class OrderController extends Controller
                 ->select('products.product_name','products.product_code','products.image','order_details.*')
                 ->get();
                 return response()->json($details);
+    }
+
+
+    public function searchOrder(Request $request)
+    {
+        $orderdate = $request->date;
+        $formatdate = new DateTime($orderdate);
+        $date = $formatdate->format('d-m-Y');
+
+
+        $order = DB::table('orders')
+                ->join('customers','orders.customer_id','customers.id')
+                ->where('order_date',$date)
+                ->select('customers.name','orders.*')
+                ->orderBy('orders.id','DESC')
+                ->get();
+
+        return response()->json($order);
     }
 }

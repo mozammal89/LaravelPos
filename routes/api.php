@@ -84,6 +84,7 @@ Route::get('/decrement/{id}',[CartController::class,'decrementItem'])->name('dec
 // order done 
 Route::post('/order-done',[PosController::class,'orderDone'])->name('order.done');
 Route::get('/today-order',[OrderController::class,'todayOrder'])->name('today.order');
+Route::Post('/search/order',[OrderController::class,'searchOrder'])->name('search.order');
 Route::get('/order-details/{id}',[OrderController::class,'orderDetails'])->name('order.details');
 Route::get('/order/order-details/{id}',[OrderController::class,'orderOrderDetails'])->name('order.orderdetails');
 
