@@ -92,3 +92,10 @@ Route::get('/order/order-details/{id}',[OrderController::class,'orderOrderDetail
 Route::apiResource('/extra',ExtraController::class);
 
 Route::get('/vats',[ExtraController::class,'getVat'])->name('get.vat');
+
+// Admin Dashboard
+Route::get('/today/sell',[PosController::class,'todaySell'])->name('today.sell');
+Route::get('/today/income',[PosController::class,'todayIncome'])->name('today.income');
+Route::get('/today/due',[PosController::class,'todayDue'])->name('today.due');
+Route::get('/today/expanse',[PosController::class,'todayExpanse'])->name('today.expanse');
+Route::get('/today/stock-out',[PosController::class,'todayStockOut'])->name('today.stock.out');

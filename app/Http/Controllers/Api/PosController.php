@@ -60,4 +60,52 @@ class PosController extends Controller
             DB::table('pos')->delete();
             return response('done');
     }
+
+
+    public function todaySell(Request $request)
+    {
+        $date = date('d-m-Y');
+        $sell = DB::table('orders')
+                ->where('order_date',$date)->sum('total');
+                return response()->json($sell);
+    }
+
+    public function todayIncome()
+    {
+        $date = date('d-m-Y');
+        $expdate = date('Y-m-d');
+        $sell = DB::table('orders')
+                ->where('order_date',$date)->sum('total');
+        
+        $expanse = DB::table('expanses')
+                    ->where('expanse_date',$expdate)->sum('amount');
+
+        $income = $sell-$expanse;
+                return response()->json($income);
+
+    }
+
+
+    public function todayDue(Request $request)
+    {
+        $date = date('d-m-Y');
+        $sell = DB::table('orders')
+                ->where('order_date',$date)->sum('due');
+                return response()->json($sell);
+    }
+
+    public function todayExpanse(Request $request)
+    {
+        $date = date('Y-m-d');
+        $expanse = DB::table('expanses')
+                    ->where('expanse_date',$date)->sum('amount');
+                return response()->json($expanse);
+    }
+
+
+    public function todayStockOut()
+    {
+        $product = DB::table('products')->where('product_quantity','<','1')->get();
+        return response()->json($product);
+    }
 }
