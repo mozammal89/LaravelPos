@@ -7,7 +7,7 @@
         <ul class="navigation navigation-main" style="margin-bottom: 100px" id="main-menu-navigation"
             data-menu="menu-navigation">
             <li class=" nav-item active">
-                <router-link to="#"><i class="feather icon-home"></i><span class="menu-title"
+                <router-link to="/"><i class="feather icon-home"></i><span class="menu-title"
                         data-i18n="Dashboard">Dashboard</span></router-link>
                 {{-- <ul class="menu-content">
                         <li class="active"><a href="dashboard-analytics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
@@ -17,7 +17,7 @@
                     </ul> --}}
             </li>
             <li>
-                <router-link to="/pos"><i class="feather icon-circle"></i><span class="menu-item"
+                <router-link to="/pos"><i class="feather icon-shopping-cart"></i><span class="menu-item"
                         data-i18n="Shop">POS</span></router-link>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title"
@@ -52,7 +52,7 @@
             </li>
 
 
-            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title"
+            <li class=" nav-item"><a href="#"><i class="feather icon-grid"></i><span class="menu-title"
                         data-i18n="Ecommerce">Category</span></a>
                 <ul class="menu-content">
                     <li>
@@ -66,7 +66,7 @@
                 </ul>
             </li>
 
-            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title"
+            <li class=" nav-item"><a href="#"><i class="feather icon-shopping-bag"></i><span class="menu-title"
                         data-i18n="Ecommerce">Product</span></a>
                 <ul class="menu-content">
                     <li>
@@ -80,7 +80,7 @@
                 </ul>
             </li>
 
-            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title"
+            <li class=" nav-item"><a href="#"><i class="feather icon-trending-down"></i><span class="menu-title"
                         data-i18n="Ecommerce">Expanse</span></a>
                 <ul class="menu-content">
                     <li>
@@ -94,7 +94,7 @@
                 </ul>
             </li>
 
-            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title"
+            <li class=" nav-item"><a href="#"><i class="feather icon-dollar-sign"></i><span class="menu-title"
                         data-i18n="Ecommerce">Employee Salary</span></a>
                 <ul class="menu-content">
                     <li>
@@ -108,7 +108,7 @@
                 </ul>
             </li>
             <li>
-                <router-link to="/stock"><i class="feather icon-circle"></i><span class="menu-item"
+                <router-link to="/stock"><i class="feather icon-plus-square"></i><span class="menu-item"
                         data-i18n="Shop">Stock</span></router-link>
             </li>
 
@@ -126,7 +126,7 @@
                 </ul>
             </li>
 
-            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title"
+            <li class=" nav-item"><a href="#"><i class="feather icon-layers"></i><span class="menu-title"
                 data-i18n="Ecommerce">Extra</span></a>
                 <ul class="menu-content">
                     <li>
@@ -140,7 +140,7 @@
                 </ul>
             </li>
 
-            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title"
+            <li class=" nav-item"><a href="#"><i class="feather icon-list"></i><span class="menu-title"
                 data-i18n="Ecommerce">Order</span></a>
                 <ul class="menu-content">
                     <li>

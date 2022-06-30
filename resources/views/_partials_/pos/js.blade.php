@@ -32,6 +32,7 @@
     <script src="{{asset('app-assets/js/core/app-menu.js')}}"></script>
     <script src="{{asset('app-assets/js/core/app.js')}}"></script>
     <script src="{{asset('app-assets/js/scripts/components.js')}}"></script>
+    <script src="{{asset('app-assets/js/scripts/ui/ui-feather.js')}}"></script>
     <!-- END: Theme JS-->
     
 
@@ -54,5 +55,14 @@
     <!-- END: Page JS-->
     
     <!-- END: Page JS-->
-   
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
     @stack('end_js')
