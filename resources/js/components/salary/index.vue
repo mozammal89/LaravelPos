@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">All Salary Details</h4>
-              <router-link class="btn btn-warning btn-sm" to="/given-salary"
+              <router-link class="btn btn-info waves-effect waves-float waves-light btn-sm" to="/given-salary"
                 >Pay Salary</router-link
               >
             </div>

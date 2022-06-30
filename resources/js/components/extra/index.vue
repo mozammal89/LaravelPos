@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Extra List</h4>
-              <router-link class="btn btn-warning btn-sm" to="/store-extra"
+              <router-link class="btn btn-info waves-effect waves-float waves-light btn-sm" to="/store-extra"
                 >Add Extra</router-link
               >
             </div>

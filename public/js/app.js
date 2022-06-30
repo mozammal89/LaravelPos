@@ -8994,6 +8994,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_created$created$data = {
   created: function created() {
     if (!User.loggedIn()) {
@@ -45777,7 +45778,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/category-list" },
                   },
                   [_vm._v("Category List")]
@@ -45914,7 +45916,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/category-list" },
                   },
                   [_vm._v("category List")]
@@ -46051,7 +46054,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-category" },
                   },
                   [_vm._v("Add Category")]
@@ -46207,7 +46211,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/customer-list" },
                   },
                   [_vm._v("Customer List")]
@@ -46509,7 +46514,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/customer-list" },
                   },
                   [_vm._v("Customer List")]
@@ -46811,7 +46817,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-customer" },
                   },
                   [_vm._v("Add Customer")]
@@ -46982,7 +46989,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/employee-list" },
                   },
                   [_vm._v("Employee List")]
@@ -47402,7 +47410,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/employee-list" },
                   },
                   [_vm._v("Employee List")]
@@ -47822,7 +47831,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-employee" },
                   },
                   [_vm._v("Add Employee")]
@@ -47999,7 +48009,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/expanse-list" },
                   },
                   [_vm._v("Expanse List")]
@@ -48216,7 +48227,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/expanse-list" },
                   },
                   [_vm._v("Employee List")]
@@ -48434,7 +48446,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-expanse" },
                   },
                   [_vm._v("Add Expanse")]
@@ -48598,7 +48611,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/customer-list" },
                   },
                   [_vm._v("Extra/vat List")]
@@ -48894,7 +48908,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/extra-list" },
                   },
                   [_vm._v("Extra List")]
@@ -49190,7 +49205,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-extra" },
                   },
                   [_vm._v("Add Extra")]
@@ -49985,7 +50001,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/today-order" },
                   },
                   [_vm._v("Today Order")]
@@ -50219,7 +50236,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/pos" },
                   },
                   [_vm._v("Pos")]
@@ -50367,12 +50385,33 @@ var render = function () {
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-lg-5 col-12" }, [
           _c("div", { staticClass: "card" }, [
-            _vm._m(0),
+            _c(
+              "div",
+              {
+                staticClass: "card-header d-flex justify-content-between pb-0",
+              },
+              [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v("Expanse Insert"),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
+                    attrs: { to: "/store-customer" },
+                  },
+                  [_vm._v("Add Customer")]
+                ),
+              ],
+              1
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "card-body p-0" }, [
               _c("div", { staticClass: "table-responsive" }, [
                 _c("table", { staticClass: "table" }, [
-                  _vm._m(1),
+                  _vm._m(0),
                   _vm._v(" "),
                   _c(
                     "tbody",
@@ -50695,13 +50734,13 @@ var render = function () {
         _vm._v(" "),
         _c("div", { staticClass: "col-lg-7 col-12" }, [
           _c("div", { staticClass: "card" }, [
-            _vm._m(2),
+            _vm._m(1),
             _vm._v(" "),
             _c(
               "ul",
               { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
               [
-                _vm._m(3),
+                _vm._m(2),
                 _vm._v(" "),
                 _vm._l(_vm.categories, function (category) {
                   return _c(
@@ -51114,22 +51153,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "card-header d-flex justify-content-between pb-0" },
-      [
-        _c("h6", { staticClass: "card-title" }, [_vm._v("Expanse Insert")]),
-        _vm._v(" "),
-        _c("a", { staticClass: "btn btn-sm btn-info", attrs: { href: "" } }, [
-          _vm._v("Add Customer"),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
         _c("th", [_vm._v("Name")]),
@@ -51215,7 +51238,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/product-list" },
                   },
                   [_vm._v("Product List")]
@@ -51751,7 +51775,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/product-list" },
                   },
                   [_vm._v("Product List")]
@@ -51924,7 +51949,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/product-list" },
                   },
                   [_vm._v("Product List")]
@@ -52462,7 +52488,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-product" },
                   },
                   [_vm._v("Add Product")]
@@ -52645,7 +52672,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-product" },
                   },
                   [_vm._v("Add Product")]
@@ -52833,7 +52861,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-employee" },
                   },
                   [_vm._v("Add Employee")]
@@ -52993,7 +53022,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/employee-list" },
                   },
                   [_vm._v("Employee List")]
@@ -53347,7 +53377,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/all-salary" },
                   },
                   [_vm._v("Go Back")]
@@ -53726,7 +53757,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/given-salary" },
                   },
                   [_vm._v("Pay Salary")]
@@ -53869,7 +53901,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-employee" },
                   },
                   [_vm._v("Add Employee")]
@@ -54024,7 +54057,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/supplier-list" },
                   },
                   [_vm._v("Supplier List")]
@@ -54368,7 +54402,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/supplier-list" },
                   },
                   [_vm._v("Supplier List")]
@@ -54712,7 +54747,8 @@ var render = function () {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-warning btn-sm",
+                    staticClass:
+                      "btn btn-info waves-effect waves-float waves-light btn-sm",
                     attrs: { to: "/store-supplier" },
                   },
                   [_vm._v("Add Supplier")]

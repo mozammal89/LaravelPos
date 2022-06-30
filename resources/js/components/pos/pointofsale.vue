@@ -6,7 +6,8 @@
           <div class="card">
             <div class="card-header d-flex justify-content-between pb-0">
               <h6 class="card-title">Expanse Insert</h6>
-              <a href="" class="btn btn-sm btn-info">Add Customer</a>
+              <router-link class="btn btn-info waves-effect waves-float waves-light btn-sm" to="/store-customer"
+                >Add Customer</router-link>
             </div>
         <div class="card-body p-0">
           <div class="table-responsive">

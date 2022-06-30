@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Search Order</h4>
-              <router-link class="btn btn-warning btn-sm" to="/today-order"
+              <router-link class="btn btn-info waves-effect waves-float waves-light btn-sm" to="/today-order"
                 >Today Order</router-link
               >
             </div>

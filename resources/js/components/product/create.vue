@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Add Product</h4>
-              <router-link class="btn btn-warning btn-sm" to="/product-list"
+              <router-link class="btn btn-info waves-effect waves-float waves-light btn-sm" to="/product-list"
                 >Product List</router-link
               >
             </div>

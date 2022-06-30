@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Edit Employee</h4>
-              <router-link class="btn btn-warning btn-sm" to="/expanse-list"
+              <router-link class="btn btn-info waves-effect waves-float waves-light btn-sm" to="/expanse-list"
                 >Employee List</router-link
               >
             </div>

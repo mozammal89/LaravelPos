@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Customer List</h4>
-              <router-link class="btn btn-warning btn-sm" to="/store-customer"
+              <router-link class="btn btn-info waves-effect waves-float waves-light btn-sm" to="/store-customer"
                 >Add Customer</router-link
               >
             </div>

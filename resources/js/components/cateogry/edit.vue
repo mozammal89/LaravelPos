@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Edit Category</h4>
-              <router-link class="btn btn-warning btn-sm" to="/category-list"
+              <router-link class="btn btn-info waves-effect waves-float waves-light btn-sm" to="/category-list"
                 >category List</router-link
               >
             </div>
